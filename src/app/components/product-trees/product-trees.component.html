@@ -1,0 +1,16 @@
+<div class="wrapper__trees">
+    <div class="lay__site trees">
+        <div class="menu"></div>
+        <div class="products">
+            <h1>Ялинки</h1>
+            <div class="product" *ngFor="let tree of trees">
+                <img src="../../../assets/image/viktoria zelena.jpg" alt="">
+                <div class="name"><p>{{tree.title}}</p></div>
+                <div class="product__button">
+                    <div class="price">{{tree.price | currency:"UAH"}}</div>
+                    <button [routerLink]="['/product', tree.id]">Купити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
