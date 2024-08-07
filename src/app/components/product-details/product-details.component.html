@@ -1,1 +1,9 @@
-<p>product-details works!</p>
+<div *ngIf="product">
+    <h1>{{ product.title }}</h1>
+    <img [src]="product.image" alt="{{ product.title }}">
+    <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
+    <p>Тип: {{ product.type }}</p>
+    <p>Кольори: {{ product.configure.colors.join(', ') }}</p>
+    <p>Розміри: {{ product.configure.size.join(', ') }}</p>
+  </div>
+  

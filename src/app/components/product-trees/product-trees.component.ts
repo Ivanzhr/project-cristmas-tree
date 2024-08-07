@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-trees.component.scss'
 })
 export class ProductTreesComponent implements OnInit{
-  constructor(private pruductsTreeService: ServiceForTreesService) {}
+  constructor(private productsTreeService: ServiceForTreesService) {}
 
   trees: IPproducts[] = [];
 
   ngOnInit(): void {
-    this.trees = this.pruductsTreeService.getTrees();
+    this.trees = this.productsTreeService.getTrees();
     console.log(this.trees)
   }
 }

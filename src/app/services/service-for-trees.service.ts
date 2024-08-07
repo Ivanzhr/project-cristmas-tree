@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IPproducts } from '../modules/productsTree';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ServiceForTreesService {
         "id": 1,
         "title": "Еліт",
         "price": 2900,
-        "image": "aaa",
+        "image": "../../../assets/image/viktoria zelena.jpg",
         "type": "Лита",
         "configure": {
           "colors":[
@@ -92,7 +93,12 @@ export class ServiceForTreesService {
     
 ]
 
-getTrees() {
+getTrees(): IPproducts[] {
   return this.trees;
 }
+
+getTreeById(id: number): IPproducts | undefined {
+  return this.trees.find(tree => tree.id === id);
+}
+
 }
