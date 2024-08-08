@@ -3,7 +3,15 @@
     <img [src]="product.image" alt="{{ product.title }}">
     <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
     <p>Тип: {{ product.type }}</p>
-    <p>Кольори: {{ product.configure.colors.join(', ') }}</p>
-    <p>Розміри: {{ product.configure.size.join(', ') }}</p>
+
+</div>
+<div>
+  <h2>Доступні розміри:</h2>
+  <div *ngFor="let size of productSizes">
+    <img [src]="size.image" alt="">
+    <p>Розмір: {{ size.size }} м</p>
+    <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
+    <button [routerLink]="['/productToOrder', size.id]">Купити</button>
   </div>
+</div>
   

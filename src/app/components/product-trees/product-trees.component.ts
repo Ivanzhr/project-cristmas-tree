@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceForTreesService } from '../../services/service-for-trees.service';
 import { RouterLink } from '@angular/router';
-import { IPproducts } from '../../modules/productsTree';
+import { IProduct } from '../../modules/productsTree';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,10 +14,9 @@ import { CommonModule } from '@angular/common';
 export class ProductTreesComponent implements OnInit{
   constructor(private productsTreeService: ServiceForTreesService) {}
 
-  trees: IPproducts[] = [];
+  trees: IProduct[] = [];
 
   ngOnInit(): void {
     this.trees = this.productsTreeService.getTrees();
-    console.log(this.trees)
   }
 }
