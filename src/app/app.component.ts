@@ -6,11 +6,12 @@ import { ProductGarlandsComponent } from './components/product-garlands/product-
 import { ProductTreesComponent } from './components/product-trees/product-trees.component';
 import { ProductWreathsComponent } from './components/product-wreaths/product-wreaths.component';
 import { FooterComponent } from './UI/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BasicComponent,HeaderComponent, ProductGarlandsComponent, ProductTreesComponent, ProductWreathsComponent, FooterComponent],
+  imports: [RouterOutlet, BasicComponent,HeaderComponent, ProductGarlandsComponent, ProductTreesComponent, ProductWreathsComponent, FooterComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

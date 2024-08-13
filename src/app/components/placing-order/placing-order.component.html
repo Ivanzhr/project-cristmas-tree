@@ -1,7 +1,13 @@
 <div *ngIf="productSizes">
-    <h1>{{ productSizes.title }}</h1>
-    <!-- <img [src]="size.image" alt="{{ size.title }}">
-    <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
-    <p>Тип: {{ size.type }}</p> -->
-
+  <h1>{{ productSizes.title }}</h1>
 </div>
+
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <input type="text" name="Name" placeholder="Name" ngModel required>
+    <input type="text" name="Phone" placeholder="Number" ngModel required>
+    <input type="text" name="Product Name" placeholder="Product Name" ngModel>
+    <input type="text" name="Size" placeholder="Size" ngModel>
+    <input type="text" name="Price" placeholder="Price" ngModel>
+    <input type="text" name="City" placeholder="City" ngModel>
+    <button type="submit">Send</button>
+</form>
