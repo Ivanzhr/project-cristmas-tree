@@ -1,23 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { IProduct } from '../../modules/productsTree';
-import { IProductSize } from '../../modules/productsTree';
 import { ServiceForTreesService } from '../../services/service-for-trees.service';
-import { CommonModule } from '@angular/common';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
+import { IPgerlands, IPled } from '../../modules/productsTree';
 
 @Component({
-  selector: 'app-product-details',
+  selector: 'app-led-details',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './product-details.component.html',
-  styleUrl: './product-details.component.scss'
+  templateUrl: './led-details.component.html',
+  styleUrl: './led-details.component.scss'
 })
-export class ProductDetailsComponent implements OnInit{
-  product: IProduct | undefined;
-  productSizes: IProductSize[] | undefined;
+export class LedDetailsComponent implements OnInit{
+  product: IPled | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,15 +24,8 @@ export class ProductDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.product = this.productsTreeService.getTreeById(id);
-    if (this.product) {
-      this.productSizes = this.product.size;
-      this.productsTreeService.setSelectedProductId(id)
-      console.log(this.product.gallery);
-    } else {
-      console.error(`Product with id ${id} not found.`);
-    }
-
+    this.product = this.productsTreeService.getLedById(id);
+    console.log(this.product)
     Fancybox.bind(this.elRef.nativeElement, '[data-fancybox]', {
     });
     

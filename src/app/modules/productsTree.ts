@@ -11,10 +11,28 @@ export interface IProduct {
   title: string;
   price: number;
   image: string;
+  gallery: string[];
   type: string;
+  color: string;
   size: IProductSize[];
 }
 
+export interface IPgerlands {
+  id: number;
+  title: string;
+  price: number;
+  image: string[];
+  color: string;
+}
+
+export interface IPled {
+  id: number;
+  title: string;
+  price: number;
+  image: string[];
+  color: string;
+  size: string;
+}
 
 // export interface IProductConfigure {
 //   size: IProductSize[];

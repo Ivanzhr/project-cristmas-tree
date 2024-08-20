@@ -1,17 +1,38 @@
-<div *ngIf="product">
-    <h1>{{ product.title }}</h1>
-    <img [src]="product.image" alt="{{ product.title }}">
-    <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
-    <p>Тип: {{ product.type }}</p>
-
-</div>
-<div>
-  <h2>Доступні розміри:</h2>
-  <div *ngFor="let size of productSizes">
-    <img [src]="size.image" alt="">
-    <p>Розмір: {{ size.size }} м</p>
-    <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
-    <button [routerLink]="['/productToOrder', size.id]">Купити</button>
+<div class="details_wrapper">
+  <div class="lay__site">
+    <div class="photos" *ngIf="product">
+      <h1>{{product.title}}</h1>
+      <div class="gallery">
+        <a class="main_photo" data-fancybox="gallery" href="{{product.gallery[0]}}">
+          <img src="{{product.gallery[0]}}" />
+        </a>
+        <div class="more_photos">
+          <a *ngFor="let photo of product.gallery.slice(1)" data-fancybox="gallery" href="{{photo}}">
+            <img src="{{photo}}" />
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="sizes">
+      <div class="size" *ngFor="let size of productSizes">
+        <img [src]="size.image" alt="">
+        <p>Розмір: {{ size.size }} м</p>
+        <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
+        <button class="btn_buy" [routerLink]="['/productToOrder', size.id]">Купити</button>
+      </div>
+    </div>
+    <div class="data">
+      <div class="delivery">
+        <h3>Доставка</h3>
+        <p>На відділенна нової пошти</p>
+        <p>Доставка кур'єром</p>
+      </div>
+      <div class="paying">
+        <h3>Оплата замовлення</h3>
+        <p>При отриманні</p>
+        <p>На рахунок</p>
+      </div>
+    </div>
   </div>
 </div>
-  

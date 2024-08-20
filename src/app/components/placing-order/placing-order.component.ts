@@ -23,10 +23,15 @@ export class PlacingOrderComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private productsTreeService: ServiceForTreesService){}
 
+  // ngOnInit(): void {
+  //   const id = Number(this.route.snapshot.paramMap.get('id'));
+  //   this.productSizes = this.productsTreeService.getTreeByIdForOrder(id);
+  //   console.log(this.productSizes);
+  // }
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.productSizes = this.productsTreeService.getTreeByIdForOrder(id);
-    console.log(this.productSizes);
+    console.log(id);
   }
   
   async onSubmit(form: NgForm): Promise<void> {
@@ -34,10 +39,11 @@ export class PlacingOrderComponent implements OnInit{
       const formData = form.value;
       let message = `<b>Заявка з сайту</b>\n`;
           message += `<b>імя</b>: ${formData.Name}\n`;
+          message += `<b>прізвище</b>: ${formData.LastName}\n`;
           message += `<b>тел</b>: ${formData.Phone}\n`;
-          message += `<b>продукт</b>: ${formData.Product_Name}\n`;
-          message += `<b>розмір</b>: ${formData.Size}\n`;
-          message += `<b>ціна</b>: ${formData.Price}\n`;
+          message += `<b>продукт</b>: ${this.productSizes?.title}\n`;
+          message += `<b>розмір</b>: ${this.productSizes?.size}\n`;
+          message += `<b>ціна</b>: ${this.productSizes?.price}\n`;
           message += `<b>місто</b>: ${formData.City}\n`;
 
       try {

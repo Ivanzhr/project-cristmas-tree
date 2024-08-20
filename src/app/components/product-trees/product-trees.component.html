@@ -1,16 +1,51 @@
 <div class="wrapper__trees">
     <div class="lay__site trees">
-        <div class="menu"></div>
-        <div class="products">
-            <h1>Ялинки</h1>
-            <div class="product" *ngFor="let tree of trees">
-                <img src="../../../assets/image/viktoria zelena.jpg" alt="">
-                <div class="name"><p>{{tree.title}}</p></div>
-                <div class="product__button">
-                    <div class="price">{{tree.price | currency:"UAH"}}</div>
-                    <button [routerLink]="['/product', tree.id]">Купити</button>
+        <div class="filters">
+            <div class="type">
+                <h3>Тип:</h3>
+                <form>
+                    <label>
+                        <input type="radio" name="option" value="option1">
+                        Литі
+                    </label><br>
+                    <label>
+                        <input type="radio" name="option" value="option2">
+                        Плівка ПВХ
+                    </label><br>
+                    <label>
+                        <input type="radio" name="option" value="option3">
+                        Завсніжені
+                    </label><br>
+                </form>
+            </div>
+            <div class="colors">
+                <h3>Колір:</h3>
+                <form>
+                    <label>
+                        <input type="radio" name="option" value="option1">
+                        Зелений
+                    </label><br>
+                    <label>
+                        <input type="radio" name="option" value="option2">
+                        Блакитний
+                    </label><br>
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <h1>Штучні ялинки</h1>
+            <div class="products">
+                <div class="product" *ngFor="let tree of trees" [routerLink]="['/product', tree.id]">
+                    <!-- <img src="../../../assets/image/viktoria zelena.jpg" alt=""> -->
+                    <img src="{{tree.gallery[0]}}" alt="">
+                    <div class="name"><p>{{tree.title}}</p></div>
+                    <div class="product__bottom">
+                        <div class="price">Від {{tree.price | currency:"UAH"}}</div>
+                        <button class="btn_buy" [routerLink]="['/product', tree.id]">Купити</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
