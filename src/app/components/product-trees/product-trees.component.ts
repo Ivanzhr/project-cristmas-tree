@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ServiceForTreesService } from '../../services/service-for-trees.service';
-import { RouterLink } from '@angular/router';
-import { IProduct } from '../../modules/productsTree';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {ServiceForTreesService} from '../../services/service-for-trees.service';
+import {RouterLink} from '@angular/router';
+import {IProduct} from '../../modules/productsTree';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-product-trees',
@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductTreesComponent implements OnInit {
 
-  constructor(private productsTreeService: ServiceForTreesService) { }
+  constructor(private productsTreeService: ServiceForTreesService) {
+  }
 
   trees: IProduct[] = [];
 
@@ -32,11 +33,4 @@ export class ProductTreesComponent implements OnInit {
     console.log('Select changed:', event.target.value);
     console.log('Form value:', form.value);
   }
-
-
-  selectProductForDetailing(obj: any) {
-    this.productsTreeService.setSelectedProductDetails(obj)
-  }
-
-
 }

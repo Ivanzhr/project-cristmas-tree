@@ -18,7 +18,7 @@
         <div class="menu">
             <h1>Гірл'янди LED</h1>
             <div class="products">
-                <div class="product" *ngFor="let led of leds" [routerLink]="['/product']" (click)="selectProductForDetailing(led)">
+                <div class="product" *ngFor="let led of leds" [routerLink]="['/wreath/' + led.id]">
                     <img src="{{led.gallery[0]}}" alt="">
                     <div class="name"><p>{{led.title}}</p></div>
                     <div class="product__bottom">
@@ -28,6 +28,6 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

@@ -1,5 +1,5 @@
-<div class="wrapper__gerlands">
-    <div class="lay__site gerlands">
+<div class="wrapper__garlands">
+    <div class="lay__site garlands">
         <div class="filters">
             <div class="type">
                 <h3>Тип</h3>
@@ -14,7 +14,7 @@
                     </fieldset>
                 </form>
             </div>
-            
+
             <div class="colors">
                 <h3>Колір</h3>
                 <form method="post" #colorForm="ngForm">
@@ -31,21 +31,21 @@
                     </fieldset>
                 </form>
             </div>
-            
+
         </div>
         <div class="menu">
             <h1>Штучні вінки</h1>
             <div class="products">
-                <div class="product" *ngFor="let gerland of gerlands" [routerLink]="['/product']" (click)="selectProductForDetailing(gerland)">
-                    <img src="{{gerland.gallery[0]}}" alt="">
-                    <div class="name"><p>{{gerland.title}}</p></div>
+                <div class="product" *ngFor="let garland of garlands" [routerLink]="['/garlands/' + garland.id]">
+                    <img src="{{garland.gallery[0]}}" alt="">
+                    <div class="name"><p>{{garland.title}}</p></div>
                     <div class="product__bottom">
-                        <div class="price">Від {{gerland.price | currency:"UAH"}}</div>
+                        <div class="price">Від {{garland.price | currency:"UAH"}}</div>
                         <button class="btn_buy">Купити</button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

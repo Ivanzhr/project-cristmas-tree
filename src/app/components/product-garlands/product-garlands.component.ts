@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ServiceForTreesService } from '../../services/service-for-trees.service';
-import { IPgerlands } from '../../modules/productsTree';
-import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {ServiceForTreesService} from '../../services/service-for-trees.service';
+import {IPgarlands} from '../../modules/productsTree';
+import {RouterLink} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-product-garlands',
@@ -14,13 +14,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductGarlandsComponent implements OnInit {
 
-  constructor(private productsTreeService: ServiceForTreesService) {}
+  constructor(private productsTreeService: ServiceForTreesService) {
+  }
 
-  gerlands: IPgerlands[] = [];
+  garlands: IPgarlands[] = [];
 
   ngOnInit(): void {
-    this.gerlands = this.productsTreeService.getGerlands();
-    console.log(this.gerlands)
+    this.garlands = this.productsTreeService.getGarlands();
+    console.log(this.garlands)
   }
 
   onSelectChangetype(event: any, form: any): void {
@@ -32,9 +33,4 @@ export class ProductGarlandsComponent implements OnInit {
     console.log('Select changed:', event.target.value);
     console.log('Form value:', form.value);
   }
-
-  selectProductForDetailing(obj: any){
-    this.productsTreeService.setSelectedProductDetails(obj)
-  }
-
 }

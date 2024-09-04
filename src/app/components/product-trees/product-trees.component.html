@@ -14,7 +14,7 @@
                     </fieldset>
                 </form>
             </div>
-            
+
             <div class="colors">
                 <h3>Колір</h3>
                 <form method="post" #colorForm="ngForm">
@@ -31,17 +31,17 @@
                     </fieldset>
                 </form>
             </div>
-            
+
         </div>
         <div class="menu">
             <h1>Штучні ялинки</h1>
             <div class="products">
-                <div class="product" *ngFor="let tree of trees" [routerLink]="['/product']" (click)="selectProductForDetailing(tree)">
+                <div class="product" *ngFor="let tree of trees" [routerLink]="['/tree/' + tree.id]">
                     <img src="{{tree.gallery[0]}}" alt="">
                     <div class="name"><p>{{tree.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{tree.price | currency:"UAH"}}</div>
-                        <button class="btn_buy" [routerLink]="['/product', tree.id]">Купити</button>
+                        <button class="btn_buy" [routerLink]="['/tree/' + tree.id]">Купити</button>
                     </div>
                     <div class="label">
                         <div *ngIf="tree.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>
@@ -50,6 +50,6 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

@@ -1,0 +1,18 @@
+<div class="details_wrapper" *ngIf="product !== null">
+  <div class="lay__site">
+    <div class="photos">
+      <h1>{{ product.title }}</h1>
+      <app-product-gallery [gallery]="product.gallery || []"></app-product-gallery>
+      <div class="description">
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+    <div class="buy">
+      <img src="{{product.gallery[0]}}" alt="">
+      <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
+      <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(product)">Купити</button>
+    </div>
+
+    <app-delivery-info></app-delivery-info>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IProduct, IProductSize, IPgerlands, IPled } from '../modules/productsTree';
+import { IProduct, IPgarlands, IPled } from '../modules/productsTree';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,6 @@ export class ServiceForTreesService {
 
   constructor() { }
 
-  private ProductForDetails: any | null = null;
   private selectedForBuy: any | null = null;
 
   private trees: IProduct[] = [
@@ -608,7 +607,7 @@ export class ServiceForTreesService {
 
   ]
 
-  private gerlands: IPgerlands[] = [
+  private garlands: IPgarlands[] = [
     {
       id: 1,
       title: "Віденський засніжений",
@@ -719,7 +718,7 @@ export class ServiceForTreesService {
       bestseller: false,
       sale: false,
     }
-    
+
   ]
 
   private leds: IPled[] = [
@@ -730,7 +729,7 @@ export class ServiceForTreesService {
       price: 1200,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
       color: "warmLight",
-      length: "100м" 
+      length: "100м"
     },
     {
       id: 2,
@@ -739,7 +738,7 @@ export class ServiceForTreesService {
       price: 1200,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
       color: "warmLight",
-      length: "100м" 
+      length: "100м"
     },
     {
       id: 3,
@@ -748,7 +747,7 @@ export class ServiceForTreesService {
       price: 1200,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
       color: "warmLight",
-      length: "100м" 
+      length: "100м"
     },
     {
       id: 4,
@@ -757,7 +756,7 @@ export class ServiceForTreesService {
       price: 1200,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
       color: "warmLight",
-      length: "100м" 
+      length: "100м"
     },
     {
       id: 5,
@@ -766,7 +765,7 @@ export class ServiceForTreesService {
       price: 1200,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
       color: "warmLight",
-      length: "100м" 
+      length: "100м"
     },
   ]
 
@@ -777,16 +776,7 @@ export class ServiceForTreesService {
   }
 
   getTreeById(id: number): IProduct | undefined {
-    return this.trees.find(tree => tree.id === id);
-  }
-
-  setSelectedProductDetails(obj: any): void {
-    this.ProductForDetails = obj;
-    console.log(this.ProductForDetails)
-  }
-
-  getSelectedProductDetails() {
-    return this.ProductForDetails
+    return this.trees.find(item => item.id === id);
   }
 
   getSale() {
@@ -805,16 +795,15 @@ export class ServiceForTreesService {
   //   return undefined;
   // }
 
-  //-------------------// function for gerlands
+  //-------------------// function for garlands
 
-  getGerlands(): IPgerlands[] {
-    return this.gerlands
+  getGarlands(): IPgarlands[] {
+    return this.garlands
   }
 
-  getGerlandById(id: number): IPgerlands | undefined {
-    return this.gerlands.find(gerland => gerland.id === id);
+  getGarlandById(id: number): IPgarlands | undefined {
+    return this.garlands.find(item => item.id === id);
   }
-  //-------------------// function for led
 
 
   getLed(): IPled[] {
@@ -822,7 +811,7 @@ export class ServiceForTreesService {
   }
 
   getLedById(id: number): IPled | undefined {
-    return this.leds.find(led => led.id === id);
+    return this.leds.find(item => item.id === id);
   }
 
 

@@ -20,7 +20,7 @@ export interface IProduct {
   size: IProductSize[];
 }
 
-export interface IPgerlands {
+export interface IPgarlands {
   id: number;
   title: string;
   description: string;

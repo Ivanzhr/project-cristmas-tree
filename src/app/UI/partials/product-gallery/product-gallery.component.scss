@@ -1,0 +1,19 @@
+.gallery {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .more_photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+
+    a {
+      width: calc(100% / 3 - 7px);
+    }
+  }
+
+}

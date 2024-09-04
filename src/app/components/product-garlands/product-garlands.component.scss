@@ -1,13 +1,13 @@
-.wrapper__gerlands {
+.wrapper__garlands {
     margin-top: 20px;
-    .gerlands {
+    .garlands {
         display: flex;
         gap: 20px;
         @media (max-width: 860px){
           flex-direction: column;
           align-items: center;
         }
-        
+
         .filters {
           width: calc(20% - 20px);
           display: flex;
@@ -32,7 +32,7 @@
               border: none;
             }
           }
-    
+
           .type, .colors {
             form fieldset {
               display: flex;

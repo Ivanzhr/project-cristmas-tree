@@ -1,0 +1,10 @@
+<div class="gallery">
+  <a class="main_photo" data-fancybox="gallery" href="{{gallery[0]}}">
+    <img src="{{gallery[0]}}" alt=""/>
+  </a>
+  <div class="more_photos">
+    <a *ngFor="let photo of gallery.slice(1)" data-fancybox="gallery" href="{{photo}}">
+      <img src="{{photo}}" alt=""/>
+    </a>
+  </div>
+</div>
