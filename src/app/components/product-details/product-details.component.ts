@@ -16,8 +16,8 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
   styleUrl: './product-details.component.scss'
 })
 export class ProductDetailsComponent implements OnInit{
-  product: IProduct | undefined;
-  productSizes: IProductSize[] | undefined;
+  product: any | undefined;
+  // productSizes: IProductSize[] | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,15 +26,16 @@ export class ProductDetailsComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.product = this.productsTreeService.getTreeById(id);
-    if (this.product) {
-      this.productSizes = this.product.size;
-      this.productsTreeService.setSelectedProductId(id)
-      console.log(this.product.gallery);
-    } else {
-      console.error(`Product with id ${id} not found.`);
-    }
+    this.product = this.productsTreeService.getSelectedProductDetails()
+    console.log(this.product)
+    // const id = Number(this.route.snapshot.paramMap.get('id'));
+    // this.product = this.productsTreeService.getTreeById(id);
+    // if (this.product) {
+    //   this.productSizes = this.product.size;
+    //   this.productsTreeService.setSelectedProductId(id)
+    // } else {
+    //   console.error(`Product with id ${id} not found.`);
+    // }
 
     Fancybox.bind(this.elRef.nativeElement, '[data-fancybox]', {
     });
@@ -45,4 +46,9 @@ export class ProductDetailsComponent implements OnInit{
     Fancybox.unbind(this.elRef.nativeElement);
     Fancybox.close();
   }
+
+  selectedProduct(obj:any) :void {
+    this.productsTreeService.setSelectedForBuy(obj)
+  }
+
 }

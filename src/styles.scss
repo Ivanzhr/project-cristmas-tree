@@ -5,8 +5,9 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif, Roboto;
+    font-family: assistant, sans-serif;
 }
+
 .lay__site {
     max-width: 1440px;
     padding: 0 20px;
@@ -14,10 +15,13 @@ body {
     margin: 0 auto;
 }
 
+li {
+    list-style-type: none;
+}
 
 
 .btn_buy {
-    background-color: #28a745;
+    background-color: #4d5d45;
     color: #fff;
     padding: 5px 10px;
     font-size: 16px;
@@ -36,3 +40,113 @@ body {
     }
 
 }
+
+fieldset {
+    border: none;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    @media (max-width: 860px) {
+        width: 100% !important;
+    }
+    .product {
+        width: calc(100% / 3 - 20px);
+        padding: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        @media (max-width: 1060px) {
+            width: calc(100% / 2 - 20px);
+        }
+        @media (max-width: 860px) {
+            width: calc(100% - 20px);
+        }
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
+            // height: 550px;
+        }
+
+        .name {
+            margin: 10px 0;
+            @media (max-width: 860px) {
+                text-align: center;
+            }
+        }
+        .product__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 860px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .label {
+            position: absolute;
+            top: 20px;
+            left: -5px;
+            color: #fff;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            div span {
+                display: inline-block;
+                padding: 5px 15px 5px 5px;
+            }
+            .sale-banner {
+                span {
+                    background: linear-gradient(to right, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%);
+                    
+                }
+            }
+
+            .best_sellers_banner {
+                span {
+                    background: linear-gradient(to right, rgb(254, 202, 31) 0%, rgba(255, 0, 0, 0) 100%);
+                }
+                
+            }
+        }
+    }
+}
+
+input[type="radio"] {
+    appearance: none; /* Вимикаємо стандартний вигляд */
+    width: 15px;
+    height: 15px;
+    border: 1px solid #4d5d45; /* Колір рамки */
+    border-radius: 2px; /* Залишаємо трохи округлені кути, або зробіть 0 для прямокутних кутів */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+// input[type="radio"]:checked {
+//     background-color: #4d5d45; /* Зелений фон для квадратика */
+// }
+
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    border: solid #4d5d45;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+

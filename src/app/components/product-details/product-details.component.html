@@ -13,15 +13,27 @@
         </div>
         
       </div>
+      <div class="description">
+        <p>{{product.description}}</p>
+      </div>
     </div>
-    <div class="sizes">
-      <div class="size" *ngFor="let size of productSizes">
+    <div *ngIf="product?.size?.length > 0; else noSizesAvailable" class="sizes" >
+      <div class="size" *ngFor="let size of product.size">
         <img [src]="size.image" alt="">
         <p>Розмір: {{ size.size }} м</p>
         <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
-        <button class="btn_buy" [routerLink]="['/productToOrder', size.id]">Купити</button>
+        <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(size)">Купити</button>
       </div>
     </div>
+    <ng-template #noSizesAvailable>
+      <div class="buy">
+        <img src="{{product.gallery[0]}}" alt="">
+        <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
+        <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(product)">Купити</button>
+      </div>
+    </ng-template>
+    
+    
     <div class="data">
       <div class="delivery">
         <h3>Доставка</h3>

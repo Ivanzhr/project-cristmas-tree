@@ -3,14 +3,49 @@
     .gerlands {
         display: flex;
         gap: 20px;
-
+        @media (max-width: 860px){
+          flex-direction: column;
+          align-items: center;
+        }
+        
         .filters {
-            width: 20%;
-            .colors {
-                border: 1px solid #e6e9f0;
-                border-radius: 5px;
-                padding: 20px;
+          width: calc(20% - 20px);
+          display: flex;
+          flex-direction: column;
+          padding: 0 20px;
+          gap: 30px;
+          @media (max-width: 860px){
+            flex-direction: row;
+            width: 80%;
+            border-bottom: 1px solid #4d5d45;
+            padding-bottom: 10px;
+            justify-content: center;
+          }
+
+          .type, .colors{
+            border-top: 0.5px solid #4d5d45;
+            h3 {
+              margin: 25px 0;
+              color: #4d5d45;
             }
+            @media (max-width: 860px) {
+              border: none;
+            }
+          }
+    
+          .type, .colors {
+            form fieldset {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              @media (max-width: 860px) {
+                flex-direction: row;
+              }
+              @media (max-width: 610px) {
+              flex-direction: column;
+          }
+            }
+          }
         }
 
         .menu {
@@ -18,36 +53,10 @@
             h1 {
                 font-size: 47px;
                 font-weight: 500;
+                color: #4d5d45;
+                @media (max-width: 860px) {
+                  text-align: center;
             }
-            .products {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 20px;
-                margin-top: 30px;
-                .product {
-                    width: calc(100% / 3 - 20px);
-                    padding: 10px;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                    &:hover {
-                        transform: scale(1.05);
-                        cursor: pointer;
-                    }
-                    img {
-                        width: 100%;
-                        // height: 550px;
-                    }
-
-                    .name {
-                        margin: 10px 0;
-                    }
-                    .product__bottom {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                }
             }
         }
     }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IProductSize } from '../../modules/productsTree';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceForTreesService } from '../../services/service-for-trees.service';
 import { CommonModule } from '@angular/common';
@@ -15,7 +14,7 @@ import axios from 'axios';
 })
 export class PlacingOrderComponent implements OnInit{
   
-  productSizes: IProductSize | undefined;
+  productForBuy: any;
 
   readonly TOKEN = '7411018328:AAHJbitA-yrlo0mEBjRIegQN3hFCR3ikRZI';
   readonly CHAT_ID = '-1002183967208';
@@ -23,15 +22,9 @@ export class PlacingOrderComponent implements OnInit{
 
   constructor(private route: ActivatedRoute, private productsTreeService: ServiceForTreesService){}
 
-  // ngOnInit(): void {
-  //   const id = Number(this.route.snapshot.paramMap.get('id'));
-  //   this.productSizes = this.productsTreeService.getTreeByIdForOrder(id);
-  //   console.log(this.productSizes);
-  // }
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.productSizes = this.productsTreeService.getTreeByIdForOrder(id);
-    console.log(id);
+    this.productForBuy = this.productsTreeService.getSelectedForBuy();
+    console.log(this.productForBuy);
   }
   
   async onSubmit(form: NgForm): Promise<void> {
@@ -41,9 +34,9 @@ export class PlacingOrderComponent implements OnInit{
           message += `<b>імя</b>: ${formData.Name}\n`;
           message += `<b>прізвище</b>: ${formData.LastName}\n`;
           message += `<b>тел</b>: ${formData.Phone}\n`;
-          message += `<b>продукт</b>: ${this.productSizes?.title}\n`;
-          message += `<b>розмір</b>: ${this.productSizes?.size}\n`;
-          message += `<b>ціна</b>: ${this.productSizes?.price}\n`;
+          message += `<b>продукт</b>: ${this.productForBuy?.title}\n`;
+          message += `<b>розмір</b>: ${this.productForBuy?.size}\n`;
+          message += `<b>ціна</b>: ${this.productForBuy?.price}\n`;
           message += `<b>місто</b>: ${formData.City}\n`;
 
       try {

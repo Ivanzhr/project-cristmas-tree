@@ -1,0 +1,62 @@
+.order {
+  width: 60%;
+  margin: 0 auto;
+  color: #4d5d45;
+  padding: 0 20px;
+  @media (max-width: 1400px){
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .about {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    border-bottom: 0.5px solid #4d5d45;
+    padding-bottom: 20px ;
+    @media (max-width: 860px) {
+      justify-content: space-between;
+    }
+    .text {
+      display: flex;
+      gap: 15px;
+    }
+    img {
+      width: 100px;
+    }
+  }
+
+  .contacts {
+    h2 {
+      margin: 20px 0;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      border-radius: 5px;
+      @media (max-width: 860px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+      input {
+        padding: 10px;
+        border: 0.5px solid #4d5d45;
+        border-radius: 2px;
+        margin-right: 5px;
+        color: #4d5d45;
+        &:focus {
+          border: 1px solid #4d5d45;
+          outline: none;
+        }
+      }
+      button {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

@@ -2,46 +2,50 @@
     <div class="lay__site trees">
         <div class="filters">
             <div class="type">
-                <h3>Тип:</h3>
-                <form>
-                    <label>
-                        <input type="radio" name="option" value="option1">
-                        Литі
-                    </label><br>
-                    <label>
-                        <input type="radio" name="option" value="option2">
-                        Плівка ПВХ
-                    </label><br>
-                    <label>
-                        <input type="radio" name="option" value="option3">
-                        Завсніжені
-                    </label><br>
+                <h3>Тип</h3>
+                <form method="post" #typeForm="ngForm">
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="typeSelect" value="литі" ngModel (change)="onSelectChangetype($event, typeForm)" /> Литі
+                        </label>
+                        <label>
+                            <input type="radio" name="typeSelect" value="пвх" ngModel (change)="onSelectChangetype($event, typeForm)" /> ПВХ
+                        </label>
+                    </fieldset>
                 </form>
             </div>
+            
             <div class="colors">
-                <h3>Колір:</h3>
-                <form>
-                    <label>
-                        <input type="radio" name="option" value="option1">
-                        Зелений
-                    </label><br>
-                    <label>
-                        <input type="radio" name="option" value="option2">
-                        Блакитний
-                    </label><br>
+                <h3>Колір</h3>
+                <form method="post" #colorForm="ngForm">
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="colorSelect" value="green" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Зелені
+                        </label>
+                        <label>
+                            <input type="radio" name="colorSelect" value="blue" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Блакитні
+                        </label>
+                        <label>
+                            <input type="radio" name="colorSelect" value="snow" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Засніжені
+                        </label>
+                    </fieldset>
                 </form>
             </div>
+            
         </div>
         <div class="menu">
             <h1>Штучні ялинки</h1>
             <div class="products">
-                <div class="product" *ngFor="let tree of trees" [routerLink]="['/product', tree.id]">
-                    <!-- <img src="../../../assets/image/viktoria zelena.jpg" alt=""> -->
+                <div class="product" *ngFor="let tree of trees" [routerLink]="['/product']" (click)="selectProductForDetailing(tree)">
                     <img src="{{tree.gallery[0]}}" alt="">
                     <div class="name"><p>{{tree.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{tree.price | currency:"UAH"}}</div>
                         <button class="btn_buy" [routerLink]="['/product', tree.id]">Купити</button>
+                    </div>
+                    <div class="label">
+                        <div *ngIf="tree.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>
+                        <div *ngIf="tree.sale" class="sale-banner"><span>Акція</span></div>
                     </div>
                 </div>
             </div>

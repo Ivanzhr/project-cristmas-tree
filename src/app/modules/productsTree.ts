@@ -9,29 +9,34 @@ export interface IProductSize {
 export interface IProduct {
   id: number;
   title: string;
+  description: string;
   price: number;
   image: string;
   gallery: string[];
   type: string;
   color: string;
+  bestseller: Boolean,
+  sale: Boolean,
   size: IProductSize[];
 }
 
 export interface IPgerlands {
   id: number;
   title: string;
+  description: string;
   price: number;
-  image: string[];
+  gallery: string[];
   color: string;
 }
 
 export interface IPled {
   id: number;
   title: string;
+  description: string;
   price: number;
-  image: string[];
+  gallery: string[];
   color: string;
-  size: string;
+  length: string;
 }
 
 // export interface IProductConfigure {

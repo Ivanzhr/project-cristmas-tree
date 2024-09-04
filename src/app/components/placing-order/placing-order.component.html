@@ -1,11 +1,34 @@
-<div *ngIf="productSizes">
-  <h1>{{ productSizes.title }}</h1>
+<div class="order_wrapper">
+  <div class="lay__site order">
+    <h1>Оформлення замовлення</h1>
+    <div *ngIf="productForBuy.size; else noSizesAvailable" class="about">
+      <img src="{{productForBuy.image}}" alt="">
+      <div class="text">
+        <h3>{{ productForBuy.title }}</h3>
+        <h3 *ngIf="productForBuy.size">{{ productForBuy.size }}м.</h3>
+      </div>
+      <h4 class="price">Ціна: {{ productForBuy.price }}</h4>
+    </div>
+    <ng-template #noSizesAvailable>
+      <div *ngIf="productForBuy" class="about">
+        <img src="{{productForBuy.gallery[0]}}" alt="">
+        <div class="text">
+          <h3>{{ productForBuy.title }}</h3>
+          <h3 *ngIf="productForBuy.size">Розмір:{{ productForBuy.size }}м.</h3>
+        </div>
+        <h4>Ціна: {{ productForBuy.price }}</h4>
+      </div>
+    </ng-template>
+    <div class="contacts">
+      <h2>Введіть свої дані</h2>
+      <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <input type="text" name="Name" placeholder="Введіть ваше ім'я" ngModel required>
+        <input type="text" name="LastName" placeholder="Введіть ваше прізвище" ngModel required>
+        <input type="text" name="Phone" placeholder="Введіть номер телефону" ngModel required>
+        <input type="text" name="City" placeholder="Введіть ваше місто/село" ngModel>
+        <button class="btn_buy" type="submit">Замовити</button>
+      </form>
+    </div>
+  </div>
 </div>
-
-<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-  <input type="text" name="Name" placeholder="Введіть ваше ім'я" ngModel required>
-  <input type="text" name="LastName" placeholder="Введіть ваше прізвище" ngModel required>
-  <input type="text" name="Phone" placeholder="Введіть номер телефону" ngModel required>
-  <input type="text" name="City" placeholder="Введіть ваше місто/село" ngModel>
-  <button type="submit">Send</button>
-</form>
+  

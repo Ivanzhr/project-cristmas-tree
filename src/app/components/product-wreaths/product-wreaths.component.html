@@ -1,29 +1,28 @@
 <div class="wrapper__leds">
     <div class="lay__site leds">
-        <div class="filters">
+        <!-- <div class="filters">
             <div class="colors">
                 <h3>Колір:</h3>
-                <form>
-                    <label>
-                        <input type="radio" name="option" value="option1">
-                        Білий
-                    </label><br>
-                    <label>
-                        <input type="radio" name="option" value="option2">
-                        Тепло білий
-                    </label><br>
-                </form>
+                <form method="post" #myForm="ngForm">
+                    <fieldset>
+                      <label>
+                        <input type="radio" name="mySelect" value="литі" ngModel (change)="onSelectChangetype($event, myForm)" /> Литі
+                      </label>
+                      <label>
+                        <input type="radio" name="mySelect" value="пвх" ngModel (change)="onSelectChangetype($event, myForm)" /> ПВХ
+                      </label>
+                    </fieldset>
+                  </form>
             </div>
-        </div>
+        </div> -->
         <div class="menu">
             <h1>Гірл'янди LED</h1>
             <div class="products">
-                <div class="product" *ngFor="let led of leds" [routerLink]="['/led', led.id]">
-                    <img src="../../../assets/image/led.jpeg" alt="">
+                <div class="product" *ngFor="let led of leds" [routerLink]="['/product']" (click)="selectProductForDetailing(led)">
+                    <img src="{{led.gallery[0]}}" alt="">
                     <div class="name"><p>{{led.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{led.price | currency:"UAH"}}</div>
-                        <!-- <button class="btn_buy" [routerLink]="['/product', tree.id]">Купити</button> -->
                         <button class="btn_buy">Купити</button>
                     </div>
                 </div>

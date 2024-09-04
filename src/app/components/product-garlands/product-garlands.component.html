@@ -1,29 +1,46 @@
 <div class="wrapper__gerlands">
     <div class="lay__site gerlands">
         <div class="filters">
-            <div class="colors">
-                <h3>Колір:</h3>
-                <form>
-                    <label>
-                        <input type="radio" name="option" value="option1">
-                        Зелений
-                    </label><br>
-                    <label>
-                        <input type="radio" name="option" value="option2">
-                        Блакитний
-                    </label><br>
+            <div class="type">
+                <h3>Тип</h3>
+                <form method="post" #typeForm="ngForm">
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="typeSelect" value="литі" ngModel (change)="onSelectChangetype($event, typeForm)" /> Литі
+                        </label>
+                        <label>
+                            <input type="radio" name="typeSelect" value="пвх" ngModel (change)="onSelectChangetype($event, typeForm)" /> ПВХ
+                        </label>
+                    </fieldset>
                 </form>
             </div>
+            
+            <div class="colors">
+                <h3>Колір</h3>
+                <form method="post" #colorForm="ngForm">
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="colorSelect" value="green" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Зелені
+                        </label>
+                        <label>
+                            <input type="radio" name="colorSelect" value="blue" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Блакитні
+                        </label>
+                        <label>
+                            <input type="radio" name="colorSelect" value="snow" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Засніжені
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+            
         </div>
         <div class="menu">
             <h1>Штучні вінки</h1>
             <div class="products">
-                <div class="product" *ngFor="let gerland of gerlands" [routerLink]="['/garland', gerland.id]">
-                    <img src="../../../assets/image/vinok_rozovuy-800x1.jpg" alt="">
+                <div class="product" *ngFor="let gerland of gerlands" [routerLink]="['/product']" (click)="selectProductForDetailing(gerland)">
+                    <img src="{{gerland.gallery[0]}}" alt="">
                     <div class="name"><p>{{gerland.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{gerland.price | currency:"UAH"}}</div>
-                        <!-- <button class="btn_buy" [routerLink]="['/product', tree.id]">Купити</button> -->
                         <button class="btn_buy">Купити</button>
                     </div>
                 </div>

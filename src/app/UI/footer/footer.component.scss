@@ -1,5 +1,68 @@
 .footer {
-    height: 120px;
-    margin-top: 20px;
-    background-color: green;
+    background-color: #4d5d45;
+    .lay__site {
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 20px 0;
+        @media (max-width: 610px) {
+            flex-wrap: wrap;
+        }
+        div {
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        div {
+            .footer_nav {
+                li {
+                    a {
+                        display: inline-block;
+                        margin: 5px;
+                        text-decoration: none;
+                        color: #fff;
+                        height: 100%;
+                        padding: 0 60px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        div {
+            .about li {
+                margin: 5px;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+    }
 }

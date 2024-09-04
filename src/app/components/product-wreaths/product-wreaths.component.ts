@@ -20,4 +20,8 @@ export class ProductWreathsComponent implements OnInit{
   ngOnInit(): void {
     this.leds = this.productsTreeService.getLed();
   }
+
+  selectProductForDetailing(obj: any){
+    this.productsTreeService.setSelectedProductDetails(obj)
+  }
 }
