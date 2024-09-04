@@ -27,6 +27,9 @@ export interface IPgerlands {
   price: number;
   gallery: string[];
   color: string;
+  type: string;
+  bestseller: Boolean,
+  sale: Boolean,
 }
 
 export interface IPled {

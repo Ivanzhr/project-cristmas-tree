@@ -9,7 +9,6 @@ export class ServiceForTreesService {
   constructor() { }
 
   private ProductForDetails: any | null = null;
-  // private selectedGerlandId: number | null = null;
   private selectedForBuy: any | null = null;
 
   private trees: IProduct[] = [
@@ -616,7 +615,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow"
+      color: "snow",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 2,
@@ -624,7 +626,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 3,
@@ -632,7 +637,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow"
+      color: "snow",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 4,
@@ -640,7 +648,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 5,
@@ -648,7 +659,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow"
+      color: "snow",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 6,
@@ -656,7 +670,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 7,
@@ -664,7 +681,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 8,
@@ -672,7 +692,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow"
+      color: "snow",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 9,
@@ -680,7 +703,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 10,
@@ -688,7 +714,10 @@ export class ServiceForTreesService {
       description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       price: 350,
       gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green"
+      color: "green",
+      type: "лита",
+      bestseller: false,
+      sale: false,
     }
     
   ]
