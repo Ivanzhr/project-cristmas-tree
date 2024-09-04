@@ -6,10 +6,10 @@
                 <form method="post" #typeForm="ngForm">
                     <fieldset>
                         <label>
-                            <input type="radio" name="typeSelect" value="литі" ngModel (change)="onSelectChangetype($event, typeForm)" /> Литі
+                            <input type="radio" name="typeSelect" value="лита" ngModel (change)="onSelectChangeType($event)" /> Литі
                         </label>
                         <label>
-                            <input type="radio" name="typeSelect" value="пвх" ngModel (change)="onSelectChangetype($event, typeForm)" /> ПВХ
+                            <input type="radio" name="typeSelect" value="пвх" ngModel (change)="onSelectChangeType($event)" /> ПВХ
                         </label>
                     </fieldset>
                 </form>
@@ -20,13 +20,13 @@
                 <form method="post" #colorForm="ngForm">
                     <fieldset>
                         <label>
-                            <input type="radio" name="colorSelect" value="green" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Зелені
+                            <input type="radio" name="colorSelect" value="green" ngModel (change)="onSelectChangeColor($event)" /> Зелені
                         </label>
                         <label>
-                            <input type="radio" name="colorSelect" value="blue" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Блакитні
+                            <input type="radio" name="colorSelect" value="blue" ngModel (change)="onSelectChangeColor($event)" /> Блакитні
                         </label>
                         <label>
-                            <input type="radio" name="colorSelect" value="snow" ngModel (change)="onSelectChangecolor($event, colorForm)" /> Засніжені
+                            <input type="radio" name="colorSelect" value="snow" ngModel (change)="onSelectChangeColor($event)" /> Засніжені
                         </label>
                     </fieldset>
                 </form>

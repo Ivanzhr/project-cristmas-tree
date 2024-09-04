@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './product-trees.component.scss'
 })
 export class ProductTreesComponent implements OnInit {
+  private type: string = '';
+  private color: string = '';
 
   constructor(private productsTreeService: ServiceForTreesService) {
   }
@@ -24,13 +26,27 @@ export class ProductTreesComponent implements OnInit {
 
   }
 
-  onSelectChangetype(event: any, form: any): void {
-    console.log('Select changed:', event.target.value);
-    console.log('Form value:', form.value);
+  onSelectChangeType(event: any): void {
+    this.type = event.target.value;
+    this.filterTrees();
   }
 
-  onSelectChangecolor(event: any, form: any): void {
-    console.log('Select changed:', event.target.value);
-    console.log('Form value:', form.value);
+  onSelectChangeColor(event: any): void {
+    this.color = event.target.value;
+    this.filterTrees();
+  }
+
+  private filterTrees() {
+    let items: IProduct[] = this.productsTreeService.getTrees();
+
+    if (this.type !== '') {
+      items = items.filter(tree => tree.type === this.type);
+    }
+
+    if (this.color !== '') {
+      items = items.filter(tree => tree.color === this.color);
+    }
+
+    this.trees = items;
   }
 }

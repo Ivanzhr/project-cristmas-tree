@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './product-garlands.component.scss'
 })
 export class ProductGarlandsComponent implements OnInit {
+  private type: string = '';
+  private color: string = '';
 
   constructor(private productsTreeService: ServiceForTreesService) {
   }
@@ -24,13 +26,27 @@ export class ProductGarlandsComponent implements OnInit {
     console.log(this.garlands)
   }
 
-  onSelectChangetype(event: any, form: any): void {
-    console.log('Select changed:', event.target.value);
-    console.log('Form value:', form.value);
+  onSelectChangeType(event: any): void {
+    this.type = event.target.value;
+    this.filterGarlands();
   }
 
-  onSelectChangecolor(event: any, form: any): void {
-    console.log('Select changed:', event.target.value);
-    console.log('Form value:', form.value);
+  onSelectChangeColor(event: any): void {
+    this.color = event.target.value;
+    this.filterGarlands();
+  }
+
+  private filterGarlands() {
+    let items: IPgarlands[] = this.productsTreeService.getGarlands();
+
+    if (this.type !== '') {
+      items = items.filter(garland => garland.type === this.type);
+    }
+
+    if (this.color !== '') {
+      items = items.filter(garland => garland.color === this.color);
+    }
+
+    this.garlands = items;
   }
 }
