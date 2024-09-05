@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ServiceForTreesService } from '../../services/service-for-trees.service';
-import { CommonModule } from '@angular/common';
-import { FormsModule, NgForm } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ServiceForTreesService} from '../../services/service-for-trees.service';
+import {CommonModule} from '@angular/common';
+import {FormsModule, NgForm} from '@angular/forms';
 import axios from 'axios';
+import {IPgarlands, IPled, IProduct, IProductSize} from "../../modules/productsTree";
 
 @Component({
   selector: 'app-placing-order',
@@ -12,32 +13,52 @@ import axios from 'axios';
   templateUrl: './placing-order.component.html',
   styleUrl: './placing-order.component.scss'
 })
-export class PlacingOrderComponent implements OnInit{
-  
-  productForBuy: any;
+export class PlacingOrderComponent implements OnInit {
+
+  productForBuy: IProduct | IPled | IPgarlands | null | any;
+  public product: IProduct | IPled | IPgarlands | IProductSize | any = undefined;
+  private productType: string = '';
+  private productId: number | null = null;
+  private productSizeId: number | null = null;
 
   readonly TOKEN = '7411018328:AAHJbitA-yrlo0mEBjRIegQN3hFCR3ikRZI';
   readonly CHAT_ID = '-1002183967208';
   readonly URL_API = `https://api.telegram.org/bot${this.TOKEN}/sendMessage`;
 
-  constructor(private route: ActivatedRoute, private productsTreeService: ServiceForTreesService){}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private productsTreeService: ServiceForTreesService
+  ) {
+  }
 
   ngOnInit(): void {
     this.productForBuy = this.productsTreeService.getSelectedForBuy();
-    console.log(this.productForBuy);
+    this.route.params.subscribe({
+      next: (r: Params) => {
+        this.productId = Number(r['id']);
+        this.productType = String(r['type']).trim();
+        this.productSizeId = Number(r['size'] || 0);
+        if (this.productId <= 0 || this.productType === '') {
+          this.notFound();
+        } else {
+          this.getProductInfo();
+        }
+      }
+    });
   }
-  
+
   async onSubmit(form: NgForm): Promise<void> {
     if (form.valid) {
       const formData = form.value;
       let message = `<b>Заявка з сайту</b>\n`;
-          message += `<b>імя</b>: ${formData.Name}\n`;
-          message += `<b>прізвище</b>: ${formData.LastName}\n`;
-          message += `<b>тел</b>: ${formData.Phone}\n`;
-          message += `<b>продукт</b>: ${this.productForBuy?.title}\n`;
-          message += `<b>розмір</b>: ${this.productForBuy?.size}\n`;
-          message += `<b>ціна</b>: ${this.productForBuy?.price}\n`;
-          message += `<b>місто</b>: ${formData.City}\n`;
+      message += `<b>імя</b>: ${formData.Name}\n`;
+      message += `<b>прізвище</b>: ${formData.LastName}\n`;
+      message += `<b>тел</b>: ${formData.Phone}\n`;
+      message += `<b>продукт</b>: ${this.productForBuy?.title}\n`;
+      message += `<b>розмір</b>: ${this.productForBuy?.size}\n`;
+      message += `<b>ціна</b>: ${this.productForBuy?.price}\n`;
+      message += `<b>місто</b>: ${formData.City}\n`;
 
       try {
         const response = await axios.post(this.URL_API, {
@@ -54,5 +75,41 @@ export class PlacingOrderComponent implements OnInit{
       console.log('Form is invalid');
     }
   }
-  
+
+  private getProductInfo() {
+    let product: IProduct | IPled | IPgarlands | IProductSize | undefined;
+
+    switch (this.productType) {
+      case 'tree':
+        product = this.productsTreeService.getTreeById(<number>this.productId);
+        if (product !== undefined && <number>this.productSizeId > 0) {
+          if ("size" in product) {
+            product = product.size.find(size => size.id === this.productSizeId);
+          }
+        }
+        break;
+
+      case 'garland':
+        product = this.productsTreeService.getGarlandById(<number>this.productId);
+        break;
+
+      case 'wreath':
+        product = this.productsTreeService.getLedById(<number>this.productId);
+        break;
+    }
+
+    if (product === undefined) {
+      this.notFound();
+    } else {
+      this.product = product
+    }
+  }
+
+  private notFound() {
+    this.router.navigate(['/']).then();
+  }
+
+  protected hasSize() {
+    return this.product !== undefined && "size" in this.product && this.product.size;
+  }
 }

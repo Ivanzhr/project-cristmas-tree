@@ -38,10 +38,6 @@ export class ProductGarlandsDetailsComponent implements OnInit {
     });
   }
 
-  selectedProduct(obj: any): void {
-    this.productsTreeService.setSelectedForBuy(obj)
-  }
-
   private getProductInfo() {
     const product = this.productsTreeService.getGarlandById(Number(this.productId));
     if (product === undefined) {

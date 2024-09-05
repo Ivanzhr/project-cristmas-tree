@@ -10,7 +10,7 @@
     <div class="buy">
       <img src="{{product.gallery[0]}}" alt="">
       <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
-      <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(product)">Купити</button>
+      <button class="btn_buy" [routerLink]="['/order/wreath/' + product.id]">Купити</button>
     </div>
 
     <app-delivery-info></app-delivery-info>

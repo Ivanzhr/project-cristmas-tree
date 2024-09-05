@@ -1,22 +1,22 @@
 <div class="order_wrapper">
   <div class="lay__site order">
     <h1>Оформлення замовлення</h1>
-    <div *ngIf="productForBuy.size; else noSizesAvailable" class="about">
-      <img src="{{productForBuy.image}}" alt="">
+    <div *ngIf="hasSize(); else noSizesAvailable" class="about">
+      <img src="{{product?.image}}" alt="">
       <div class="text">
-        <h3>{{ productForBuy.title }}</h3>
-        <h3 *ngIf="productForBuy.size">{{ productForBuy.size }}м.</h3>
+        <h3>{{ product.title }}</h3>
+        <h3 *ngIf="product.size">{{ product.size }}м.</h3>
       </div>
-      <h4 class="price">Ціна: {{ productForBuy.price }}</h4>
+      <h4 class="price">Ціна: {{ product.price }}</h4>
     </div>
     <ng-template #noSizesAvailable>
-      <div *ngIf="productForBuy" class="about">
-        <img src="{{productForBuy.gallery[0]}}" alt="">
+      <div *ngIf="product" class="about">
+        <img src="{{product.gallery[0]}}" alt="">
         <div class="text">
-          <h3>{{ productForBuy.title }}</h3>
-          <h3 *ngIf="productForBuy.size">Розмір:{{ productForBuy.size }}м.</h3>
+          <h3>{{ product.title }}</h3>
+          <h3 *ngIf="product.size">Розмір:{{ product.size }}м.</h3>
         </div>
-        <h4>Ціна: {{ productForBuy.price }}</h4>
+        <h4>Ціна: {{ product.price }}</h4>
       </div>
     </ng-template>
     <div class="contacts">
@@ -31,4 +31,3 @@
     </div>
   </div>
 </div>
-  

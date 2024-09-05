@@ -38,10 +38,6 @@ export class ProductWreathDetailsComponent implements OnInit {
     });
   }
 
-  selectedProduct(obj: any): void {
-    this.productsTreeService.setSelectedForBuy(obj)
-  }
-
   private getProductInfo() {
     const product = this.productsTreeService.getLedById(Number(this.productId));
     if (product === undefined) {

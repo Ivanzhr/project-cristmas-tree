@@ -12,14 +12,14 @@
         <img [src]="size.image" alt="">
         <p>Розмір: {{ size.size }} м</p>
         <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
-        <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(size)">Купити</button>
+        <button class="btn_buy" [routerLink]="['/order/tree/' + product.id + '/' + size.id]">Купити</button>
       </div>
     </div>
     <ng-template #noSizesAvailable>
       <div class="buy">
         <img src="{{product.gallery[0]}}" alt="">
         <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
-        <button class="btn_buy" [routerLink]="['/productToOrder']" (click)="selectedProduct(product)">Купити</button>
+        <button class="btn_buy" [routerLink]="['/order/tree/' + product.id]">Купити</button>
       </div>
     </ng-template>
 

@@ -16,6 +16,7 @@ export const routes: Routes = [
     {path: 'garlands/:id', component: ProductGarlandsDetailsComponent},
     {path: 'wreaths', component: ProductWreathsComponent},
     {path: 'wreath/:id', component: ProductWreathDetailsComponent},
-    {path: 'productToOrder', component: PlacingOrderComponent},
+    {path: 'order/:type/:id', component: PlacingOrderComponent},
+    {path: 'order/:type/:id/:size', component: PlacingOrderComponent},
     {path: '**', redirectTo:'', component: BasicComponent}
 ];
