@@ -1,4 +1,5 @@
 .header_wrapper {
+    letter-spacing: 0.1em;
     .header__top {
         .sale {
             background-color: #4D5D45;
@@ -12,8 +13,11 @@
             align-items: center;
             height: 120px;
             position: relative;
+            @media (max-width: 860px){
+                flex-direction: column;
+            }
             .social button{
-                margin: 5px;
+                margin: 15px;
                 border: none;
                 background: none;
                 color: #4D5D45;
@@ -25,6 +29,10 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
+                @media (max-width: 860px){
+                    text-align: center;
+                    margin-top: 20px;
+                }
                 a {
                     text-decoration: none;
                     color: #4D5D45;
@@ -38,6 +46,12 @@
              top: 50%;
              left: 50%;
              transform: translate(-50%, -50%);
+             @media (max-width: 860px){
+                position: static;
+                top: auto;
+                left: auto;
+                transform: none;
+            }
              button {
                 border: none;
                 background-color: #fff;
@@ -46,8 +60,15 @@
                 color: #4D5D45;
                 &:hover {
                     cursor: pointer;
+                    color: #637c57;
                 }
              }
+            }
+            
+            .social {
+                @media (max-width: 860px){
+                    display: none;
+                }
             }
         }
     }

@@ -40,6 +40,8 @@ export interface IPled {
   gallery: string[];
   color: string;
   length: string;
+  bestseller: Boolean,
+  sale: Boolean,
 }
 
 // export interface IProductConfigure {

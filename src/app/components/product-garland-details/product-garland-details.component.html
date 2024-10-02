@@ -1,18 +1,25 @@
 <div class="details_wrapper" *ngIf="product !== null">
   <div class="lay__site">
-    <div class="photos">
-      <h1>{{ product.title }}</h1>
-      <app-product-gallery [gallery]="product.gallery || []"></app-product-gallery>
-      <div class="description">
-        <p>{{ product.description }}</p>
+    <h1>{{ product.title }}</h1>
+    <div class="details">
+      <div class="photos">
+        <app-product-gallery [gallery]="product.gallery || []"></app-product-gallery>
       </div>
-    </div>
-    <div class="buy">
-      <img src="{{product.gallery[0]}}" alt="">
-      <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
-      <button class="btn_buy" [routerLink]="['/order/garland/' + product.id]">Купити</button>
-    </div>
+      <div class="sizes">
+        <div class="size">
+          <img src="{{product.gallery[0]}}" alt="">
+          <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
+          <div *ngIf="product.sale" class="old_price">
+            {{ (product.price + (product.price * 0.40)) | currency: 'UAH' }}
+          </div>
+          <button class="btn_buy" [routerLink]="['/order/garland/' + product.id]">Купити</button>
+        </div>
+        <div class="description">
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
 
-    <app-delivery-info></app-delivery-info>
+      <app-delivery-info></app-delivery-info>
+    </div>
   </div>
 </div>

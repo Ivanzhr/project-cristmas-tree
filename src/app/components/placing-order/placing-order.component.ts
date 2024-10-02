@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {ServiceForTreesService} from '../../services/service-for-trees.service';
 import {CommonModule} from '@angular/common';
@@ -15,7 +15,6 @@ import {IPgarlands, IPled, IProduct, IProductSize} from "../../modules/productsT
 })
 export class PlacingOrderComponent implements OnInit {
 
-  productForBuy: IProduct | IPled | IPgarlands | null | any;
   public product: IProduct | IPled | IPgarlands | IProductSize | any = undefined;
   private productType: string = '';
   private productId: number | null = null;
@@ -25,6 +24,8 @@ export class PlacingOrderComponent implements OnInit {
   readonly CHAT_ID = '-1002183967208';
   readonly URL_API = `https://api.telegram.org/bot${this.TOKEN}/sendMessage`;
 
+  @ViewChild('modal') modal: ElementRef | undefined;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -33,7 +34,7 @@ export class PlacingOrderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productForBuy = this.productsTreeService.getSelectedForBuy();
+  
     this.route.params.subscribe({
       next: (r: Params) => {
         this.productId = Number(r['id']);
@@ -55,9 +56,9 @@ export class PlacingOrderComponent implements OnInit {
       message += `<b>імя</b>: ${formData.Name}\n`;
       message += `<b>прізвище</b>: ${formData.LastName}\n`;
       message += `<b>тел</b>: ${formData.Phone}\n`;
-      message += `<b>продукт</b>: ${this.productForBuy?.title}\n`;
-      message += `<b>розмір</b>: ${this.productForBuy?.size}\n`;
-      message += `<b>ціна</b>: ${this.productForBuy?.price}\n`;
+      message += `<b>продукт</b>: ${this.product?.title}\n`;
+      message += `<b>розмір</b>: ${this.product?.size}\n`;
+      message += `<b>ціна</b>: ${this.product?.price}\n`;
       message += `<b>місто</b>: ${formData.City}\n`;
 
       try {
@@ -68,6 +69,7 @@ export class PlacingOrderComponent implements OnInit {
         });
         console.log('Response:', response.data);
         console.log(formData)
+        this.openModal();
       } catch (error) {
         console.error('Error:', error);
       }
@@ -103,6 +105,7 @@ export class PlacingOrderComponent implements OnInit {
     } else {
       this.product = product
     }
+    console.log(this.product)
   }
 
   private notFound() {
@@ -112,4 +115,19 @@ export class PlacingOrderComponent implements OnInit {
   protected hasSize() {
     return this.product !== undefined && "size" in this.product && this.product.size;
   }
+
+  openModal() {
+    if (this.modal) {
+      this.modal.nativeElement.style.display = "block";
+    }
+  }
+
+  closeModal() {
+    if (this.modal) {
+      this.modal.nativeElement.style.display = "none";
+    }
+    this.router.navigate(['/']);
+  }
 }
+
+

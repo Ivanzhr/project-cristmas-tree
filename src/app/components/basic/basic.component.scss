@@ -2,19 +2,59 @@
     color: #4d5d45;
     .fist__section {
         display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        @media (max-width: 610px) {
+            flex-direction: column;
+        }
         .text{
+            flex: 1;
             display: flex;
-            width: 65%;
+            flex-direction: column;
             text-align: center;
             align-items: center;
             justify-content: center;
+            background-color: #4d5d45;
+            color: #fff;
+            @media (max-width: 610px) {
+                flex-basis: auto;
+                padding-bottom: 20px;
+            }
+            h1 {
+                font-size: 60px;
+                margin: 20px 0;
+                @media (max-width: 610px){
+                    font-size: 30px;
+                }
+            }
+            p {
+                letter-spacing: 0.2em,;
+                @media (max-width: 610px){
+                    // font-size: 0.7em;
+                }
+            }
         }
         .photo {
             flex: 1;
-            height: 500px;
-            background-image: url("../../../assets/image/tree_test.jpg");
+            height: 600px;
+            background-image: url("../../../assets/image/IMG_7203.jpg");
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: center;
+            background-size: cover;
+            padding: 20px;
+            @media (max-width: 610px) {
+                flex-basis: auto;
+            }
+            h1 {
+                font-size: 60px;
+                text-align: center;
+                color: red;
+            }
+            p {
+                font-size: 30px;
+                text-align: center;
+                color: red;
+            }
         }
     }
 
@@ -32,6 +72,16 @@
             justify-content: space-around;
             align-items: center;
             margin: 20px;
+            @media (max-width: 610px){
+                // flex-direction: column;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            li {
+                @media (max-width: 610px){
+                    width: calc(100% / 2 - 20px)
+                }
+            }
             h5 {
                 margin-top: 10px;
             }
@@ -44,12 +94,37 @@
         justify-content: space-between;
         background-color: #4d5d45;
         color: #fff;
+        @media (max-width: 610px) {
+            flex-direction: column;
+        }
         .text {
-            width: 65%;
-            // padding: 60px 0 0 120px;
-    font-size: 1.2em;
-    line-height: 1.5;
-    text-align: center;
+            flex: 1;
+            font-size: 1.2em;
+            line-height: 1.5;
+            text-align: center;
+            @media (max-width: 610px) {
+                flex-basis: auto;
+                padding-top: 20px;
+            }
+
+            h1 {
+                @media (max-width: 610px) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .photo {
+            flex: 1;
+            height: 700px;
+            background-image: url("../../../assets/image/1M0A9195-2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @media (max-width: 610px) {
+                flex-basis: auto;
+                width: 100%;
+            }
         }
     }
     .reviews{
@@ -59,6 +134,9 @@
         }
         .all__reviews{
             padding: 0 17%;
+            @media (max-width: 1024px) {
+                padding: 0;
+            }
             .rewiew {
                 display: flex;
                 justify-content: space-between;
@@ -66,10 +144,24 @@
                 gap: 100px;
                 padding: 40px;
                 border-bottom: 1px solid #4d5d45;
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                }
                 .text {
                     width: 50%;
                     p {
                         margin-top: 10px;
+                    }
+                }
+                .stars {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .star {
+                        color: #FFC107;
                     }
                 }
             }

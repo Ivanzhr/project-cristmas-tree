@@ -6,11 +6,19 @@
         color: #fff;
         font-size: 12px;
         margin-top: 20px;
-        padding: 20px 0;
+        padding: 30px 30px;
         @media (max-width: 610px) {
             flex-wrap: wrap;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
         }
         div {
+            @media (max-width: 610px) {
+                width: calc(100% / 2 - 10px);
+            }
             .contacts {
                 display: flex;
                 flex-direction: column;

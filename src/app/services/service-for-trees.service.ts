@@ -8,155 +8,168 @@ export class ServiceForTreesService {
 
   constructor() { }
 
-  private selectedForBuy: any | null = null;
+  // private selectedForBuy: any | null = null;
 
   private trees: IProduct[] = [
     {
       id: 1,
-      title: "Лідія з білими кінчиками",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 900,
-      image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
-      type: "пвх",
+      title: "Коваліська зелена",
+      description: `Лита ялинка "Ковалівська" — це справжній хіт серед штучних ялинок, яка поєднує в собі елегантність і природність. Її розкішні, пухнасті гілки виготовлені за унікальною технологією лиття, що гарантує міцність і довговічність. Кожна гілка складається з п'яти витончених менших гілочок, покритих м'якими хвилястими голками, що додає реалістичності й робить ялинку надзвичайно приємною на дотик.
+                    Гілки мають спеціальну ниткову фіксацію, що відповідає європейським стандартам якості та безпеки. Коричневі елементи на основах гілок надають ялинці природний, лісовий вигляд, створюючи відчуття справжнього дерева у вашому домі.
+                    У комплекті з металевою підставкою, яка забезпечує стабільність, і компактною упаковкою для зручного зберігання.
+                    Замовивши цю ялинку, ви отримаєте не тільки стильний елемент декору, а й створите неповторну атмосферу свята на довгі роки.
+                    Гірлянда не входять у вартість ялинки ,її  можна придбати за окрему плату.`,
+      price: 2270,
+      image: "../../../assets/image/1M0A9195.jpg",
+      gallery: ["../../../assets/image/1M0A9212.jpg", "../../../assets/image/1M0A9209.jpg", "../../../assets/image/1M0A9208.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg", "../../../assets/image/1M0A9207.jpg"],
+      type: "лита",
       color: "green",
       bestseller: true,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Лідія з білими кінчиками",
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
           size: 1.5,
-          price: 2500
+          price: 2270
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Лідія з білими кінчиками",
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
           size: 1.8,
-          price: 2900
+          price: 3280
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Лідія з білими кінчиками",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
+          size: 2.1,
+          price: 4260
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Лідія з білими кінчиками",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
+          size: 2.3,
+          price: 5350
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Лідія з білими кінчиками",
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
           size: 2.5,
-          price: 4900
+          price: 6890
         },
+        {
+          id: 6,
+          image: "../../../assets/image/1M0A9212.jpg",
+          title: "Коваліська зелена",
+          size: 3.0,
+          price: 10990
+        }
       ]
 
     },
     {
       id: 2,
-      title: "Різдвяна з шишкою та калиною срібна",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 950,
+      title: "Бельгійська зелена",
+      description: `Штучна ялинка Бельгійська – це справжня знахідка для любителів святкового декору. Її реалістичний вигляд досягається завдяки великій кількості індивідуально відлитих гілочок, які створюються в спеціальних формах. Це надає ялинці натурального та святкового вигляду. Коричневі елементи на основах гілок підкреслюють її лісовий характер, роблячи ще більш привабливою. 
+                    Гілочки не лише пружні та стійкі до деформації, але й приємні на дотик, що додає особливого комфорту. Обираючи цю ялинку, ви інвестуєте в естетику та атмосферу зимових свят у вашому домі!`,
+      price: 2290,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
-      type: "пвх",
+      gallery: ["../../../assets/image/1M0A9449.jpg", "../../../assets/image/1M0A9452.jpg", "../../../assets/image/1M0A9455.jpg",],
+      type: "лита",
       color: "green",
-      bestseller: false,
-      sale: false,
+      bestseller: true,
+      sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною срібна",
+          image: "../../../assets/image/1M0A9449.jpg",
+          title: "Бельгійська",
           size: 1.5,
-          price: 1500
+          price: 2290
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною срібна",
+          image: "../../../assets/image/1M0A9449.jpg",
+          title: "Бельгійська",
           size: 1.8,
-          price: 2900
+          price: 3330
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною срібна",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9449.jpg",
+          title: "Бельгійська",
+          size: 2.1,
+          price: 4760
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною срібна",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9449.jpg",
+          title: "Бельгійська",
+          size: 2.3,
+          price: 6110
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною срібна",
+          image: "../../../assets/image/1M0A9449.jpg",
+          title: "Бельгійська",
           size: 2.5,
-          price: 4900
+          price: 7790
         },
       ]
 
     },
     {
       id: 3,
-      title: "Різдвяна з шишкою та калиною золота",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2900,
+      title: "Бельгійська блакинта",
+      description: `Штучна ялинка Бельгійська – це справжня знахідка для любителів святкового декору. Її реалістичний вигляд досягається завдяки великій кількості індивідуально відлитих гілочок, які створюються в спеціальних формах. Це надає ялинці натурального та святкового вигляду. Коричневі елементи на основах гілок підкреслюють її лісовий характер, роблячи ще більш привабливою. 
+                    Гілочки не лише пружні та стійкі до деформації, але й приємні на дотик, що додає особливого комфорту. Обираючи цю ялинку, ви інвестуєте в естетику та атмосферу зимових свят у вашому домі!`,
+      price: 2290,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
-      type: "пвх",
-      color: "green",
-      bestseller: false,
+      gallery: ["../../../assets/image/1M0A9289.jpg", "../../../assets/image/1M0A9291.jpg", "../../../assets/image/1M0A9293.jpg" , "../../../assets/image/1M0A9296.jpg"],
+      type: "лита",
+      color: "blue",
+      bestseller: true,
       sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною золота",
+          image: "../../../assets/image/1M0A9289.jpg",
+          title: "Бельгійська блакинта",
           size: 1.5,
-          price: 2500
+          price: 2290
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною золота",
+          image: "../../../assets/image/1M0A9289.jpg",
+          title: "Бельгійська блакинта",
           size: 1.8,
-          price: 2900
+          price: 3330
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною золота",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9289.jpg",
+          title: "Бельгійська блакинта",
+          size: 2.1,
+          price: 4750
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною золота",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9289.jpg",
+          title: "Бельгійська блакинта",
+          size: 2.3,
+          price: 6110
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Різдвяна з шишкою та калиною золота",
+          image: "../../../assets/image/1M0A9289.jpg",
+          title: "Бельгійська блакинта",
           size: 2.5,
-          price: 4900
+          price: 7790
         },
       ]
 
@@ -164,10 +177,14 @@ export class ServiceForTreesService {
     {
       id: 4,
       title: "Ковалівська Блакитна",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      description: `Лита ялинка "Ковалівська" — це справжній хіт серед штучних ялинок, яка поєднує в собі елегантність і природність. Її розкішні, пухнасті гілки виготовлені за унікальною технологією лиття, що гарантує міцність і довговічність. Кожна гілка складається з п'яти витончених менших гілочок, покритих м'якими хвилястими голками, що додає реалістичності й робить ялинку надзвичайно приємною на дотик.
+                    Гілки мають спеціальну ниткову фіксацію, що відповідає європейським стандартам якості та безпеки. Коричневі елементи на основах гілок надають ялинці природний, лісовий вигляд, створюючи відчуття справжнього дерева у вашому домі.
+                    У комплекті з металевою підставкою, яка забезпечує стабільність, і компактною упаковкою для зручного зберігання.
+                    Замовивши цю ялинку, ви отримаєте не тільки стильний елемент декору, а й створите неповторну атмосферу свята на довгі роки.
+                    Гірлянда не входять у вартість ялинки ,її  можна придбати за окрему плату,`,
+      price: 2270,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9309.jpg", "../../../assets/image/1M0A9317.jpg", "../../../assets/image/1M0A9319.jpg"],
       type: "лита",
       color: "blue",
       bestseller: true,
@@ -175,149 +192,164 @@ export class ServiceForTreesService {
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 1.5,
-          price: 2500
+          price: 2270
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 1.8,
-          price: 2900
+          price: 3280
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
-          size: 2.0,
-          price: 3200
+          size: 2.1,
+          price: 4260
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
-          size: 2.2,
-          price: 3900
+          size: 2.3,
+          price: 5350
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 2.5,
-          price: 4900
+          price: 6890
         },
       ]
 
     },
     {
       id: 5,
-      title: "Ковалівська Зелена",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
-      image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      title: "Ковалівська Засніжена",
+      description: `Штучна ялинка лита Ковалівська засніжена – це пухнаста і елегантна модель, виготовлена з литого матеріалу та прикрашена натуральною бавовною, яка є гіпоалергенною і абсолютно безпечною для здоров'я. Кожна гілка складається з п'яти менших гілочок з хвилястими голками, що надає ялинці об’ємного вигляду. Гілки надійно закріплені ниткою відповідно до європейських стандартів, забезпечуючи їх стабільність і довговічність.
+                    Коричневі елементи на основах гілок підкреслюють природний вигляд ялинки, роблячи її схожою на лісову. У комплекті йде металева підставка, а ялинка упакована в зручну коробку для зберігання.
+                    Не зберігайте ялинку у вологих місцях і не мочіть. Замовляючи цю штучну ялинку, ви отримуєте не лише стильний декор, але й можливість створити незабутню атмосферу свята у вашому домі!`,
+      price: 2960,
+      image: "../../../assets/image/kov_zel",
+      gallery: ["../../../assets/image/1M0A9549.jpg", "../../../assets/image/1M0A9554.jpg", "../../../assets/image/1M0A9555.jpg"],
       type: "лита",
-      color: "green",
+      color: "snow",
       bestseller: true,
       sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Зелена",
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
           size: 1.5,
-          price: 2500
+          price: 2960
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Зелена",
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
           size: 1.8,
-          price: 2900
+          price: 4270
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Зелена",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
+          size: 2.1,
+          price: 5540
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Зелена",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
+          size: 2.3,
+          price: 6960
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Зелена",
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
           size: 2.5,
-          price: 4900
+          price: 8990
         },
+        {
+          id: 6,
+          image: "../../../assets/image/1M0A9549.jpg",
+          title: "Ковалівська Засніжена",
+          size: 3.0,
+          price: 14290
+        }
       ]
 
     },
     {
       id: 6,
-      title: "Бельгійська Блакитна",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Віденська засніжена",
+      description: `Штучна ялинка лита Віденська засніжена стане вишуканим акцентом вашого свята. Її оригінальна форма та засніжені гілочки, виготовлені з гіпоалергенної 100% бавовни, гарантують повну безпеку для здоров'я. Завдяки литому матеріалу, ця ялинка зберігає свій прекрасний вигляд протягом багатьох сезонів.
+                    Дерево складається з витонченого гілля двох типів: довгого та короткого, що створює стильний та пропорційний вигляд. Гілочки пружні, легко набирають будь-яку форму, а голки виготовлені з високою точністю.
+                    В комплекті ви отримаєте металічну підставку, а ялинка упакована в зручну коробку для зберігання. Уникайте зберігання ялинки у вологих умовах і не мочіть її.
+                    Створіть чарівну атмосферу зимових свят з Віденською ялинкою!`,
+      price: 2590,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9492.jpg", "../../../assets/image/1M0A9497.jpg", "../../../assets/image/1M0A9499.jpg"],
       type: "лита",
-      color: "blue",
+      color: "snow",
       bestseller: true,
       sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська Блакитна",
+          image: "../../../assets/image/1M0A9492.jpg",
+          title: "Віденська засніжена",
           size: 1.5,
-          price: 2500
+          price: 2590
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська Блакитна",
+          image: "../../../assets/image/1M0A9492.jpg",
+          title: "Віденська засніжена",
           size: 1.8,
-          price: 2900
+          price: 3840
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська Блакитна",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9492.jpg",
+          title: "Віденська засніжена",
+          size: 2.1,
+          price: 5460
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська Блакитна",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9492.jpg",
+          title: "Віденська засніжена",
+          size: 2.3,
+          price: 6840
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська Блакитна",
+          image: "../../../assets/image/1M0A9492.jpg",
+          title: "Віденська засніжена",
           size: 2.5,
-          price: 4900
+          price: 8430
         },
       ]
 
     },
     {
       id: 7,
-      title: "Бельгійська зелена",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Віденська зелена",
+      description: `Штучна ялинка лита Віденська – це чудове доповнення до вашого святкового інтер’єру. Її елегантна форма та вишуканий стиль привертають увагу. Завдяки виготовленню з литого матеріалу, ялинка має високу міцність і здатна зберігати свій бездоганний вигляд на протязі багатьох сезонів.
+                    Ця модель складається з гілок різної довжини, що створює унікальний, природний вигляд. Гілочки легко приймають бажану форму, а їхня пружність гарантує, що вони не зламаються. Декоративні коричневі елементи додають ялинці природності та роблять її схожою на справжнє дерево.
+                    У комплекті ви знайдете надійну металічну підставку, а сама ялинка буде упакована в зручну коробку для зберігання. 
+                    Додайте неповторного шарму до своїх зимових свят з Віденською ялинкою і насолоджуйтеся атмосферою свята, яка запам’ятається надовго!`,
+      price: 1960,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9514.jpg", "../../../assets/image/1M0A9519.jpg", "../../../assets/image/1M0A9522.jpg"],
       type: "лита",
       color: "green",
       bestseller: false,
@@ -326,48 +358,50 @@ export class ServiceForTreesService {
         {
           id: 1,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська зелена",
+          title: "Віденська зелена",
           size: 1.5,
-          price: 2500
+          price: 1960
         },
         {
           id: 2,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська зелена",
+          title: "Віденська зелена",
           size: 1.8,
-          price: 2900
+          price: 2960
         },
         {
           id: 3,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська зелена",
-          size: 2.0,
-          price: 3200
+          title: "Віденська зелена",
+          size: 2.1,
+          price: 4190
         },
         {
           id: 4,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська зелена",
-          size: 2.2,
-          price: 3900
+          title: "Віденська зелена",
+          size: 2.3,
+          price: 5270
         },
         {
           id: 5,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Бельгійська зелена",
+          title: "Віденська зелена",
           size: 2.5,
-          price: 4900
+          price: 6500
         },
       ]
 
     },
     {
       id: 8,
-      title: "Віденська зелена",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Канадська",
+      description: `Штучна лита зелена ялинка Канадська стане ідеальним доповненням вашого святкового декору, символізуючи Різдво та Новий рік. Її реалістичний вигляд досягається завдяки безлічі індивідуально відлитих гілочок, що створюють враження натурального дерева. Коричневі елементи на основах гілок надають ялинці лісового шарму і підкреслюють її святковість. Гілочки пружні та не підлягають деформації, забезпечуючи довговічність використання.
+                    Гілочки гнучкі, що дозволяє легко формувати їх у бажану форму.
+                    Обираючи цю штучну ялинку, ви отримуєте не лише стильний елемент декору, а й надійного супутника для святкових сезонів на багато років вперед. Не втрачайте шанс створити незабутню атмосферу зимових свят у вашому домі!`,
+      price: 2690,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/IMG_7374.jpg", "../../../assets/image/1M0A9257.jpg", "../../../assets/image/1M0A9259.jpg" , "../../../assets/image/1M0A9260.jpg"],
       type: "лита",
       color: "green",
       bestseller: false,
@@ -376,37 +410,37 @@ export class ServiceForTreesService {
         {
           id: 1,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська зелена",
+          title: "Канадська",
           size: 1.5,
-          price: 2500
+          price: 2690
         },
         {
           id: 2,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська зелена",
+          title: "Канадська",
           size: 1.8,
-          price: 2900
+          price: 3390
         },
         {
           id: 3,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська зелена",
-          size: 2.0,
-          price: 3200
+          title: "Канадська",
+          size: 2.1,
+          price: 5530
         },
         {
           id: 4,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська зелена",
-          size: 2.2,
-          price: 3900
+          title: "Канадська",
+          size: 2.3,
+          price: 6820
         },
         {
           id: 5,
           image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська зелена",
+          title: "Канадська",
           size: 2.5,
-          price: 4900
+          price: 8490
         },
       ]
 
@@ -414,10 +448,14 @@ export class ServiceForTreesService {
     {
       id: 9,
       title: "Рояль sistem umbrella",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      description: `Штучна ялинка Рояль – це ексклюзивна модель, виготовлена за передовими технологіями, що забезпечують максимальну схожість з натуральною ялинкою. Вона стане ідеальним вибором для ваших Різдвяних свят і вразить вас своїм елегантним виглядом, наче з обкладинки журналу.
+                    На основній гілці ялинки розташовані численні литі гілочки, які надають їй розкішного обсягу. Форма дерева була ретельно спроектована для досягнення максимальної природності. Кожна гілочка створена у спеціальній формі і має коричневе забарвлення для імітації стовбура.
+                    Ялинка обладнана механізмом "Парасолька": просто поверніть стовбур, і гілочки автоматично розкриються. Після використання вам не потрібно підгинати гілочки – достатньо обернути механізм, і ялинка складеться сама.
+                    Гілочки надійно закріплені до основної гілки ниткою відповідно до європейських стандартів, що виключає ризик травмування об дріт і покращує естетику стовбура.
+                    Удосконалений стовбур не прокручується, а верхівка оснащена спеціальним конектором для легкого монтажу.`,
+      price: 3710,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9609.jpg", "../../../assets/image/1M0A9613.jpg", "../../../assets/image/1M0A9616.jpg" , "../../../assets/image/1M0A9622.jpg"],
       type: "лита",
       color: "green",
       bestseller: false,
@@ -428,145 +466,170 @@ export class ServiceForTreesService {
           image: "../../../assets/image/viktoria zelena.jpg",
           title: "Рояль sistem umbrella",
           size: 1.5,
-          price: 2500
+          price: 3710
         },
         {
           id: 2,
           image: "../../../assets/image/viktoria zelena.jpg",
           title: "Рояль sistem umbrella",
           size: 1.8,
-          price: 2900
+          price: 5610
         },
         {
           id: 3,
           image: "../../../assets/image/viktoria zelena.jpg",
           title: "Рояль sistem umbrella",
-          size: 2.0,
-          price: 3200
+          size: 2.1,
+          price: 7520
         },
         {
           id: 4,
           image: "../../../assets/image/viktoria zelena.jpg",
           title: "Рояль sistem umbrella",
-          size: 2.2,
-          price: 3900
+          size: 2.3,
+          price: 9560
         },
         {
           id: 5,
           image: "../../../assets/image/viktoria zelena.jpg",
           title: "Рояль sistem umbrella",
           size: 2.5,
-          price: 4900
+          price: 12290
         },
       ]
 
     },
     {
       id: 10,
-      title: "Ковалівська Засніжена",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Різдвяна з шишкою та калиною срібна",
+      description: `Штучна ялинка Різдвяна з шишкою та калиною стане чудовою прикрасою для ваших свят. Виготовлена з міцної ПВХ-плівки, вона зберігає свій привабливий вигляд на довгі роки, пропонуючи вам більш тривалий варіант, ніж натуральні ялинки.
+                    Її призначення – дарувати радість і створювати святковий настрій. Вибираючи штучну ялинку, ви робите екологічний вибір і допомагаєте зберегти природу.
+                    З придбанням цієї ялинки ви отримуєте не лише стильний елемент декору, але й можливість насолоджуватися атмосферою зимових свят багато років поспіль.`,
+      price: 1080,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
-      type: "лита",
-      color: "show",
+      gallery: ["../../../assets/image/1M0A9401.jpg", "../../../assets/image/1M0A9404.jpg", "../../../assets/image/1M0A9406.jpg"],
+      type: "пвх",
+      color: "green",
       bestseller: false,
       sale: false,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Засніжена",
+          image: "../../../assets/image/1M0A9401.jpg",
+          title: "Різдвяна з шишкою та калиною срібна",
           size: 1.5,
-          price: 2500
+          price: 1080
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Засніжена",
+          image: "../../../assets/image/1M0A9401.jpg",
+          title: "Різдвяна з шишкою та калиною срібна",
           size: 1.8,
-          price: 2900
+          price: 1690
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Засніжена",
+          image: "../../../assets/image/1M0A9401.jpg",
+          title: "Різдвяна з шишкою та калиною срібна",
           size: 2.0,
-          price: 3200
+          price: 1990
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Засніжена",
+          image: "../../../assets/image/1M0A9401.jpg",
+          title: "Різдвяна з шишкою та калиною срібна",
           size: 2.2,
-          price: 3900
+          price: 2370
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Ковалівська Засніжена",
+          image: "../../../assets/image/1M0A9401.jpg",
+          title: "Різдвяна з шишкою та калиною срібна",
           size: 2.5,
-          price: 4900
+          price: 3310
         },
       ]
 
     },
     {
       id: 11,
-      title: "Віденська засніжена",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Лідія з білими кінчиками",
+      description: `Штучна ялинка "Лідія" допоможе створити чарівну атмосферу під час святкування Нового року. Виготовлена з високоякісного ПВХ, вона надовго зберігає свій ідеальний зовнішній вигляд. Гілки, виконані з використанням передових технологій, виглядають так само природно, як і у живої ялинки.
+                    Діаметр гілок становить 70 мм, а їхні кінці, звужені до 40 мм та вкриті ефектом снігу, додають їм особливого вигляду. Ялинка м'яка на дотик і має природний вигляд, що робить її ідеальним вибором для прикрашання будь-якого свята.`,
+      price: 460,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
-      type: "лита",
-      color: "snow",
+      gallery: ["../../../assets/image/1M0A9478.jpg", "../../../assets/image/1M0A9482.jpg", "../../../assets/image/1M0A9484.jpg"],
+      type: "пвх",
+      color: "green",
       bestseller: false,
       sale: false,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська засніжена",
-          size: 1.5,
-          price: 2500
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 1.0,
+          price: 460
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська засніжена",
-          size: 1.8,
-          price: 2900
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 1.3,
+          price: 650
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська засніжена",
-          size: 2.0,
-          price: 3200
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 1.5,
+          price: 820
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська засніжена",
-          size: 2.2,
-          price: 3900
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 1.8,
+          price: 1320
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
-          title: "Віденська засніжена",
-          size: 2.5,
-          price: 4900
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 2.0,
+          price: 1560
         },
+        {
+          id: 6,
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 2.2,
+          price: 1840
+        },
+        {
+          id: 7,
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 2.5,
+          price: 2740
+        },
+        {
+          id: 8,
+          image: "../../../assets/image/1M0A9478.jpg",
+          title: "Лідія з білими кінчиками",
+          size: 3.0,
+          price: 5080
+        }
       ]
 
     }, {
       id: 12,
-      title: "Віденська зелена у горщику",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      title: "Віденська зелена у горщику 1м",
+      description: `Декоративна лита ялинка "Віденська зелена" — це ідеальний елемент декору, який привнесе святкову атмосферу в будь-яке приміщення. Її висота складає 1,00 м, що робить її компактною та зручною для розміщення.
+                    Пухнаста ялинка виготовлена з литого матеріалу, а її гілки мають хвилясті, м'які на дотик голочки. Завдяки цьому гілля залишається пружним і не деформується. Цю ялинку можна легко розмістити на столі, каміні, в офісному просторі або вдома, додаючи затишку та святкового настрою.`,
+      price: 1090,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9339.jpg", "src/assets/image/1M0A9350.jpg"],
       type: "лита",
       color: "green",
       bestseller: false,
@@ -574,20 +637,22 @@ export class ServiceForTreesService {
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9339.jpg",
           title: "Віденська зелена у горщику",
           size: 1.0,
-          price: 1200
+          price: 1090
         }
       ]
 
     }, {
       id: 13,
       title: "Віденська засніжена у горщику",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 2200,
+      description: `Декоративна лита ялинка "Віденська засніжена" — чудовий святковий аксесуар, який легко прикрасить будь-яке приміщення.
+                    Ця пухнаста ялинка виготовлена з литого матеріалу і прикрашена натуральною бавовною, яка створює ефект снігу. Бавовна є гіпоалергенною та абсолютно безпечною для здоров'я. Гілочки мають хвилясті голки, які забезпечують пружність і не мнуться, зберігаючи свій вигляд протягом тривалого часу.
+                    Цю ялинку можна розмістити на столі, каміні, в офісі або вдома, де вона додасть тепла і затишку святковій атмосфері.`,
+      price: 1350,
       image: "../../../assets/image/viktoria zelena.jpg",
-      gallery: ["https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200" , "https://lipsum.app/id/64/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9572.jpg", "../../../assets/image/1M0A9575.jpg", "../../../assets/image/1M0A9353.jpg" , "../../../assets/image/1M0A9356.jpg", "../../../assets/image/1M0A9359.jpg"],
       type: "лита",
       color: "snow",
       bestseller: false,
@@ -595,10 +660,10 @@ export class ServiceForTreesService {
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9572.jpg",
           title: "Віденська засніжена у горщику",
           size: 1.0,
-          price: 2500
+          price: 1350
         }
       ]
 
@@ -610,10 +675,10 @@ export class ServiceForTreesService {
   private garlands: IPgarlands[] = [
     {
       id: 1,
-      title: "Віденський засніжений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      title: "Ковалівський засніжений",
+      description: `Елегантний і стильний декоративний елемент, який стане чудовим доповненням будь-якого інтер’єру. Якість вінка проявляється в кожній деталі: використання високоякісних матеріалів, литих гілок із РЕ, покритих натуральною бавовною, яка є безпечною для здоров’я та гіпоалергенною.`,
       price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9375.jpg"],
       color: "snow",
       type: "лита",
       bestseller: false,
@@ -621,98 +686,10 @@ export class ServiceForTreesService {
     },
     {
       id: 2,
-      title: "Віденський зелений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 3,
-      title: "Ковалівський засніжений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 4,
       title: "Ковалівський зелений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      description: `Зелений литий вінок – це чудовий елемент декору, який наповнить будь-який простір святковістю та чарівністю. Він виготовлений із високоякісних матеріалів, складається на 100% з литих гілок PE, що надає йому природного вигляду. Цей мінімалістичний зелений вінок ідеально підійде для шанувальників простого дизайну, а також стане чудовою основою для тих, хто бажає додати свій унікальний творчий штрих.`,
       price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 5,
-      title: "Швейцарський засніжений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 6,
-      title: "Швейцарський зелений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 7,
-      title: "Президентський з калиною зелений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 8,
-      title: "Президентський з калиною засніжений",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "snow",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 9,
-      title: "Вінок  Лісовий",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "green",
-      type: "лита",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 10,
-      title: "Мавка",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 350,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
+      gallery: ["../../../assets/image/1M0A9382.jpg"],
       color: "green",
       type: "лита",
       bestseller: false,
@@ -724,49 +701,26 @@ export class ServiceForTreesService {
   private leds: IPled[] = [
     {
       id: 1,
-      title: "Гірлядна Роса LED",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 1200,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
+      title: "Гірлядна Роса на котушці 50м",
+      description: `Гірлянда "Роса" на котушці – головний тренд 2024 року! З нею ваша ялинка виглядатиме як із фільму "Сам удома" – по-справжньому святкова та чарівна.`,
+      price: 1090,
+      gallery: ["../../../assets/image/1M0A9195-2.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg"],
       color: "warmLight",
-      length: "100м"
+      length: "100м",
+      bestseller: false,
+      sale: false,
     },
     {
       id: 2,
-      title: "Гірлядна Роса LED",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 1200,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
+      title: "Гірлядна Роса на котушці 100м",
+      description: `Гірлянда "Роса" на котушці – головний тренд 2024 року! З нею ваша ялинка виглядатиме як із фільму "Сам удома" – по-справжньому святкова та чарівна.`,
+      price: 1690,
+      gallery: ["../../../assets/image/1M0A9195-2.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg"],
       color: "warmLight",
-      length: "100м"
-    },
-    {
-      id: 3,
-      title: "Гірлядна Роса LED",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 1200,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "warmLight",
-      length: "100м"
-    },
-    {
-      id: 4,
-      title: "Гірлядна Роса LED",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 1200,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "warmLight",
-      length: "100м"
-    },
-    {
-      id: 5,
-      title: "Гірлядна Роса LED",
-      description: "Описа ялинки lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-      price: 1200,
-      gallery: ["../../../assets/image/vinok_rozovuy-800x1.jpg", "https://lipsum.app/id/60/1600x1200", "https://lipsum.app/id/61/1600x1200", "https://lipsum.app/id/63/1600x1200"],
-      color: "warmLight",
-      length: "100м"
-    },
+      length: "100м",
+      bestseller: true,
+      sale: false,
+    }
   ]
 
   //-------------------// function for tree
@@ -787,14 +741,6 @@ export class ServiceForTreesService {
     return this.trees.filter(obj => obj.bestseller === true);
   }
 
-  // getTreeByIdForOrder(sizeId: number): IProductSize | undefined {
-  //   const product = this.trees.find(tree => tree.id === this.selectedProductId);
-  //   if (product) {
-  //     return product.size.find(size => size.id === sizeId);
-  //   }
-  //   return undefined;
-  // }
-
   //-------------------// function for garlands
 
   getGarlands(): IPgarlands[] {
@@ -812,18 +758,6 @@ export class ServiceForTreesService {
 
   getLedById(id: number): IPled | undefined {
     return this.leds.find(item => item.id === id);
-  }
-
-
-  //-------------------// function for ordering
-
-  setSelectedForBuy(obj: any){
-    this.selectedForBuy = obj
-    console.log(this.selectedForBuy)
-  }
-
-  getSelectedForBuy(): any {
-    return this.selectedForBuy
   }
 
 }

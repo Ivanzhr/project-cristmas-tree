@@ -23,7 +23,14 @@
                     <div class="name"><p>{{led.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{led.price | currency:"UAH"}}</div>
+                        <div *ngIf="led.sale" class="old_price">
+                            {{ (led.price + (led.price * 0.40)) | currency:"UAH" }}
+                        </div>  
                         <button class="btn_buy">Купити</button>
+                    </div>
+                    <div class="label">
+                        <div *ngIf="led.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>
+                        <div *ngIf="led.sale" class="sale-banner"><span>Акція</span></div>
                     </div>
                 </div>
             </div>

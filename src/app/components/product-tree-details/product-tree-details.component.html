@@ -1,28 +1,37 @@
 <div class="details_wrapper" *ngIf="product !== null">
   <div class="lay__site">
-    <div class="photos">
-      <h1>{{ product.title }}</h1>
-      <app-product-gallery [gallery]="product.gallery || []"></app-product-gallery>
-      <div class="description">
-        <p>{{ product.description }}</p>
+    <h1>{{ product.title }}</h1>
+    <div class="details">
+      <div class="photos">
+        <app-product-gallery [gallery]="product.gallery || []"></app-product-gallery>
+        <div class="label">
+          <div *ngIf="product.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>
+          <div *ngIf="product.sale" class="sale-banner"><span>Акція</span></div>
+        </div>
       </div>
+      <div *ngIf="product.size.length > 0; else noSizesAvailable" class="sizes">
+        <div class="size" *ngFor="let size of product.size">
+          <img [src]="size.image" alt="">
+          <p>Розмір: {{ size.size }} м</p>
+          <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
+          <div *ngIf="product.sale" class="old_price">
+            {{ (size.price + (size.price * 0.40)) | currency: 'UAH' }}
+          </div> 
+          <button class="btn_buy" [routerLink]="['/order/tree/' + product.id + '/' + size.id]">Купити</button>
+        </div>
+      </div>
+      <ng-template #noSizesAvailable>
+        <div class="buy">
+          <img src="{{product.gallery[0]}}" alt="">
+          <p>Ціна:{{ product.price | currency: 'UAH' }}</p>
+          <button class="btn_buy" [routerLink]="['/order/tree/' + product.id]">Купити</button>
+        </div>
+      </ng-template>
+      <app-delivery-info></app-delivery-info>
     </div>
-    <div *ngIf="product.size.length > 0; else noSizesAvailable" class="sizes">
-      <div class="size" *ngFor="let size of product.size">
-        <img [src]="size.image" alt="">
-        <p>Розмір: {{ size.size }} м</p>
-        <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
-        <button class="btn_buy" [routerLink]="['/order/tree/' + product.id + '/' + size.id]">Купити</button>
-      </div>
+    <div class="description">
+      <p>{{ product.description }}</p>
     </div>
-    <ng-template #noSizesAvailable>
-      <div class="buy">
-        <img src="{{product.gallery[0]}}" alt="">
-        <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
-        <button class="btn_buy" [routerLink]="['/order/tree/' + product.id]">Купити</button>
-      </div>
-    </ng-template>
-
-    <app-delivery-info></app-delivery-info>
   </div>
+    
 </div>

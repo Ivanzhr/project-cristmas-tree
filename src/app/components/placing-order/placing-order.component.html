@@ -29,5 +29,14 @@
         <button class="btn_buy" type="submit">Замовити</button>
       </form>
     </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal" #modal (click)="closeModal()" style="display: none;">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>Дякуємо за замовлення!</p>
+        <p>Менеджер скоро зв'яжеться з вами для підтвердження деталей.</p>
+      </div>
+    </div>
+
   </div>
 </div>

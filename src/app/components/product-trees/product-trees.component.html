@@ -41,6 +41,9 @@
                     <div class="name"><p>{{tree.title}}</p></div>
                     <div class="product__bottom">
                         <div class="price">Від {{tree.price | currency:"UAH"}}</div>
+                        <div *ngIf="tree.sale" class="old_price">
+                            {{ (tree.price + (tree.price * 0.40)) | currency:"UAH" }}
+                        </div>  
                         <button class="btn_buy" [routerLink]="['/tree/' + tree.id]">Купити</button>
                     </div>
                     <div class="label">

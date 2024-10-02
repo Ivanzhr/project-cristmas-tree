@@ -36,20 +36,7 @@ export class ProductTreeDetailsComponent implements OnInit {
         }
       }
     });
-    /*this.product = this.productsTreeService.getSelectedProductDetails()
-    console.log(this.product)*/
-    // const id = Number(this.route.snapshot.paramMap.get('id'));
-    // this.product = this.productsTreeService.getTreeById(id);
-    // if (this.product) {
-    //   this.productSizes = this.product.size;
-    //   this.productsTreeService.setSelectedProductId(id)
-    // } else {
-    //   console.error(`Product with id ${id} not found.`);
-    // }
-  }
-
-  selectedProduct(obj: any): void {
-    this.productsTreeService.setSelectedForBuy(obj)
+    console.log(this.product)
   }
 
   private getProductInfo() {
