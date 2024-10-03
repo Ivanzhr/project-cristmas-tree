@@ -7,7 +7,7 @@
         @media (max-width: 610px) {
             flex-direction: column;
         }
-        .text{
+        .text {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -17,78 +17,51 @@
             background-color: #4d5d45;
             color: #fff;
             @media (max-width: 610px) {
-                flex-basis: auto;
                 padding-bottom: 20px;
             }
             h1 {
                 font-size: 60px;
                 margin: 20px 0;
-                @media (max-width: 610px){
+                @media (max-width: 610px) {
                     font-size: 30px;
                 }
             }
             p {
-                letter-spacing: 0.2em,;
-                @media (max-width: 610px){
-                    // font-size: 0.7em;
-                }
+                letter-spacing: 0.2em;
             }
         }
         .photo {
             flex: 1;
             height: 600px;
-            background-image: url("../../../assets/image/IMG_7203.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            background: url("../../../assets/image/IMG_7203.jpg") no-repeat center/cover;
             padding: 20px;
             @media (max-width: 610px) {
                 flex-basis: auto;
             }
-            h1 {
-                font-size: 60px;
-                text-align: center;
-                color: red;
-            }
-            p {
-                font-size: 30px;
+            h1, p {
                 text-align: center;
                 color: red;
             }
         }
     }
-
     .title {
         margin: 20px 0;
         padding: 15px;
         border-top: 1px solid #4d5d45;
         border-bottom: 1px solid #4d5d45;
         text-align: center;
-        p {
-            margin: 10px;
-        }
         .icons {
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin: 20px;
-            @media (max-width: 610px){
-                // flex-direction: column;
+            @media (max-width: 610px) {
                 flex-wrap: wrap;
                 gap: 20px;
             }
-            li {
-                @media (max-width: 610px){
-                    width: calc(100% / 2 - 20px)
-                }
-            }
-            h5 {
-                margin-top: 10px;
-            }
         }
-       
     }
-    .led{
+    .led {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -103,36 +76,28 @@
             line-height: 1.5;
             text-align: center;
             @media (max-width: 610px) {
-                flex-basis: auto;
-                padding-top: 20px;
+                padding: 20px 0;
             }
-
             h1 {
                 @media (max-width: 610px) {
                     font-size: 30px;
                 }
             }
         }
-
         .photo {
             flex: 1;
             height: 700px;
-            background-image: url("../../../assets/image/1M0A9195-2.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            background: url("../../../assets/image/1M0A9195-2.jpg") no-repeat center/cover;
             @media (max-width: 610px) {
-                flex-basis: auto;
                 width: 100%;
+                flex-basis: auto;
             }
         }
     }
-    .reviews{
+    .reviews {
         margin-top: 15px;
-        h1 {
-            text-align: center;
-        }
-        .all__reviews{
+        h1 { text-align: center; }
+        .all__reviews {
             padding: 0 17%;
             @media (max-width: 1024px) {
                 padding: 0;
@@ -151,28 +116,18 @@
                 }
                 .text {
                     width: 50%;
-                    p {
-                        margin-top: 10px;
-                    }
+                    p { margin-top: 10px; }
                 }
                 .stars {
-                    height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    .star {
-                        color: #FFC107;
-                    }
+                    .star { color: #FFC107; }
                 }
             }
         }
     }
-
     .best_sellers, .sales {
         margin-top: 15px;
-        h1 {
-            text-align: center;
-        }
-
+        h1 { text-align: center; }
     }
 }

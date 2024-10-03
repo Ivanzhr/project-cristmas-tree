@@ -353,39 +353,39 @@ export class ServiceForTreesService {
       type: "лита",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 1.5,
           price: 1960
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 1.8,
           price: 2960
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.1,
           price: 4190
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.3,
           price: 5270
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.5,
           price: 6500
@@ -405,39 +405,39 @@ export class ServiceForTreesService {
       type: "лита",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 1.5,
           price: 2690
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 1.8,
           price: 3390
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.1,
           price: 5530
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.3,
           price: 6820
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.5,
           price: 8490
@@ -459,39 +459,39 @@ export class ServiceForTreesService {
       type: "лита",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 1.5,
           price: 3710
         },
         {
           id: 2,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 1.8,
           price: 5610
         },
         {
           id: 3,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.1,
           price: 7520
         },
         {
           id: 4,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.3,
           price: 9560
         },
         {
           id: 5,
-          image: "../../../assets/image/viktoria zelena.jpg",
+          image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.5,
           price: 12290
@@ -511,7 +511,7 @@ export class ServiceForTreesService {
       type: "пвх",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
@@ -562,7 +562,7 @@ export class ServiceForTreesService {
       type: "пвх",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
@@ -633,7 +633,7 @@ export class ServiceForTreesService {
       type: "лита",
       color: "green",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
@@ -656,7 +656,7 @@ export class ServiceForTreesService {
       type: "лита",
       color: "snow",
       bestseller: false,
-      sale: false,
+      sale: true,
       size: [
         {
           id: 1,
