@@ -34,17 +34,17 @@
 
         </div>
         <div class="menu">
-            <h1>Штучні вінки</h1>
+            <h1>Штучні віночки</h1>
             <div class="products">
                 <div class="product" *ngFor="let garland of garlands" [routerLink]="['/garlands/' + garland.id]">
                     <img src="{{garland.gallery[0]}}" alt="">
                     <div class="name"><p>{{garland.title}}</p></div>
                     <div class="product__bottom">
-                        <div class="price">Від {{garland.price | currency:"UAH"}}</div>
+                        <div>Від</div>
                         <div *ngIf="garland.sale" class="old_price">
-                            {{ (garland.price + (garland.price * 0.40)) | currency:"UAH" }}
+                            ₴{{ (garland.price / (1 - 0.40)) | number: '1.0-0' }}
                         </div>  
-                        <button class="btn_buy">Купити</button>
+                        <div class="price">₴{{garland.price}}</div>
                     </div>
                     <div class="label">
                         <div *ngIf="garland.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>

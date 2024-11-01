@@ -85,7 +85,7 @@ fieldset {
         }
         .product__bottom {
             display: flex;
-            justify-content: space-between;
+            gap: 10px;
             align-items: center;
             @media (max-width: 860px) {
                 flex-direction: column;
@@ -121,8 +121,12 @@ input[type="radio"]:checked::before {
 
 
 .old_price {
-    color: #ff3d3d;
     text-decoration: line-through;
+}
+
+.price {
+    color: #ff3d3d;
+    font-weight: 700;
 }
 
 .label {

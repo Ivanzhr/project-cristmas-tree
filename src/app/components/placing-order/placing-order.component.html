@@ -5,30 +5,69 @@
       <img src="{{product?.image}}" alt="">
       <div class="text">
         <h3>{{ product.title }}</h3>
-        <h3 *ngIf="product.size">{{ product.size }}м.</h3>
+        <h3 *ngIf="product.size"><span style="color: #ff3d3d;">{{ product.size }}м.</span></h3>
       </div>
-      <h4 class="price">Ціна: {{ product.price }}</h4>
+      <h4 class="price">Ціна: <span style="color: #ff3d3d;">{{ product.price }}</span>грн.</h4>
     </div>
     <ng-template #noSizesAvailable>
       <div *ngIf="product" class="about">
         <img src="{{product.gallery[0]}}" alt="">
         <div class="text">
           <h3>{{ product.title }}</h3>
-          <h3 *ngIf="product.size">Розмір:{{ product.size }}м.</h3>
+          <h3 *ngIf="product.size"><span style="color: #ff3d3d;">{{ product.size }}м.</span></h3>
         </div>
-        <h4>Ціна: {{ product.price }}</h4>
+        <h4>Ціна: <span style="color: #ff3d3d;">{{ product.price }}</span>грн.</h4>
       </div>
     </ng-template>
     <div class="contacts">
-      <h2>Введіть свої дані</h2>
+      <!-- <h2>Введіть свої дані</h2> -->
+      <h2>Оформлення замовлення</h2>
       <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-        <input type="text" name="Name" placeholder="Введіть ваше ім'я" ngModel required>
-        <input type="text" name="LastName" placeholder="Введіть ваше прізвище" ngModel required>
-        <input type="text" name="Phone" placeholder="Введіть номер телефону" ngModel required>
-        <input type="text" name="City" placeholder="Введіть ваше місто/село" ngModel>
+        <h2>Доставка</h2>
+        <select name="deliveryMethod" id="deliveryselect" [(ngModel)]="deliveryMethod">
+          <option value="у відділення">Доставка у відділення Нової Пошти</option>
+          <option value="курєром">Доставка кур'єром Нової Пошти</option>
+        </select>        
+        <h2>Дані покупця</h2>
+        <input type="text" name="Name" placeholder="Ім'я" ngModel required>
+        <input type="text" name="LastName" placeholder="Прізвище" ngModel required>
+        <input type="text" name="Phone" placeholder="Номер телефону" ngModel required>
+    
+        <!-- Поле для введення міста з автозаповненням -->
+        <input
+          type="text"
+          name="City"
+          placeholder="Місто"
+          [(ngModel)]="cityName"
+          (input)="onCityInput()"
+          autocomplete="off"
+          required
+        />
+        <!-- Показуємо список підказок міст -->
+        <ul *ngIf="suggestedCities.length > 0" class="city-suggestions">
+          <li *ngFor="let city of suggestedCities" (click)="selectCity(city)">
+            {{ city.Description }}
+          </li>
+        </ul>
+    
+        <!-- Показуємо вибір відділення тільки якщо місто вибрано -->
+        <div *ngIf="warehouses.length > 0">
+          <label for="warehouseSelect">Виберіть відділення:</label>
+          <select id="warehouseSelect" name="Warehouse" [(ngModel)]="selectedWarehouse" required>
+            <option *ngFor="let warehouse of warehouses" [value]="warehouse.Description">
+              {{ warehouse.Description }}
+            </option>
+          </select>
+        </div>
+        <h2>Оплата</h2>
+        <select name="paymentMethod" id="paymentselect" [(ngModel)]="paymentMethod">
+          <option value="банківський переказ">Банківський переказ</option>
+          <option value="оплата при отриманні">Оплата при отриманні</option>
+        </select>        
         <button class="btn_buy" type="submit">Замовити</button>
       </form>
     </div>
+    
     <!-- Modal -->
     <div id="myModal" class="modal" #modal (click)="closeModal()" style="display: none;">
       <div class="modal-content">

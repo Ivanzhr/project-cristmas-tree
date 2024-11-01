@@ -13,10 +13,11 @@
         <div class="size" *ngFor="let size of product.size">
           <img [src]="size.image" alt="">
           <p>Розмір: {{ size.size }} м</p>
-          <p>Ціна: {{ size.price | currency: 'UAH' }}</p>
+          <p>Ціна</p>
           <div *ngIf="product.sale" class="old_price">
-            {{ (size.price + (size.price * 0.40)) | currency: 'UAH' }}
+            ₴{{ (product.price / (1 - 0.40)) | number: '1.0-0' }}
           </div> 
+          <p class="price">₴{{ size.price}}</p>
           <button class="btn_buy" [routerLink]="['/order/tree/' + product.id + '/' + size.id]">Купити</button>
         </div>
       </div>

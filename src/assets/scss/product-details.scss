@@ -33,8 +33,11 @@
           align-items: center;
           padding-bottom: 10px;
 
-          @media (max-width: 440px) {
+          @media (max-width: 600px) {
             flex-direction: column;
+            img {
+              width: 80%;
+            }
           }
         }
 

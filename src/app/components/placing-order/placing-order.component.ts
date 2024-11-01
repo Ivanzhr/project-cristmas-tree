@@ -6,6 +6,8 @@ import {FormsModule, NgForm} from '@angular/forms';
 import axios from 'axios';
 import {IPgarlands, IPled, IProduct, IProductSize} from "../../modules/productsTree";
 
+const apiKey = 'f46bfd60c85502508d4e8a97fad18f26';
+
 @Component({
   selector: 'app-placing-order',
   standalone: true,
@@ -23,6 +25,17 @@ export class PlacingOrderComponent implements OnInit {
   readonly TOKEN = '7411018328:AAHJbitA-yrlo0mEBjRIegQN3hFCR3ikRZI';
   readonly CHAT_ID = '-1002183967208';
   readonly URL_API = `https://api.telegram.org/bot${this.TOKEN}/sendMessage`;
+  // TELEGRAM
+
+  title = 'testone';
+  cityName: string = ''; // Змінна для введеного міста
+  suggestedCities: any[] = []; // Масив для зберігання варіантів міст
+  warehouses: any[] = []; // Масив для зберігання відділень
+  selectedWarehouse: string | null = null; // Збереження вибраного відділення
+  // NOVA POSTA
+
+  deliveryMethod: string = '';
+  paymentMethod: string = ''; 
 
   @ViewChild('modal') modal: ElementRef | undefined;
 
@@ -60,6 +73,9 @@ export class PlacingOrderComponent implements OnInit {
       message += `<b>розмір</b>: ${this.product?.size}\n`;
       message += `<b>ціна</b>: ${this.product?.price}\n`;
       message += `<b>місто</b>: ${formData.City}\n`;
+      message += `${this.selectedWarehouse}\n`;
+      message += `${this.deliveryMethod}\n`;
+      message += `${this.paymentMethod}\n`;
 
       try {
         const response = await axios.post(this.URL_API, {
@@ -127,6 +143,50 @@ export class PlacingOrderComponent implements OnInit {
       this.modal.nativeElement.style.display = "none";
     }
     this.router.navigate(['/']);
+  } 
+
+  // NOVAPOSTA
+
+  async getWarehouses(cityRef: string) {
+    try {
+      const response = await axios.post('https://api.novaposhta.ua/v2.0/json/', {
+        apiKey: apiKey,
+        modelName: 'AddressGeneral',
+        calledMethod: 'getWarehouses',
+        methodProperties: {
+          CityRef: cityRef
+        }
+      });
+      this.warehouses = response.data.data;
+    } catch (error) {
+      console.error('Помилка при отриманні відділень:', error);
+    }
+  }
+
+  async onCityInput() {
+    if (this.cityName.length > 2) { // Пошук міст тільки після 3 символів
+      try {
+        const response = await axios.post('https://api.novaposhta.ua/v2.0/json/', {
+          apiKey: apiKey,
+          modelName: 'Address',
+          calledMethod: 'getCities',
+          methodProperties: {
+            FindByString: this.cityName
+          }
+        });
+        this.suggestedCities = response.data.data; // Оновлюємо список варіантів міст
+      } catch (error) {
+        console.error('Помилка при пошуку міст:', error);
+      }
+    } else {
+      this.suggestedCities = []; // Очищуємо список варіантів, якщо введено менше 3 символів
+    }
+  }
+
+  selectCity(city: any) {
+    this.cityName = city.Description; // Заповнюємо поле з містом вибраним значенням
+    this.suggestedCities = []; // Очищуємо підказки після вибору
+    this.getWarehouses(city.Ref); // Отримуємо відділення вибраного міста
   }
 }
 

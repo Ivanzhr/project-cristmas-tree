@@ -13,13 +13,13 @@ export class ServiceForTreesService {
   private trees: IProduct[] = [
     {
       id: 1,
-      title: "Коваліська зелена",
+      title: "Ковалівська зелена",
       description: `Лита ялинка "Ковалівська" — це справжній хіт серед штучних ялинок, яка поєднує в собі елегантність і природність. Її розкішні, пухнасті гілки виготовлені за унікальною технологією лиття, що гарантує міцність і довговічність. Кожна гілка складається з п'яти витончених менших гілочок, покритих м'якими хвилястими голками, що додає реалістичності й робить ялинку надзвичайно приємною на дотик.
                     Гілки мають спеціальну ниткову фіксацію, що відповідає європейським стандартам якості та безпеки. Коричневі елементи на основах гілок надають ялинці природний, лісовий вигляд, створюючи відчуття справжнього дерева у вашому домі.
                     У комплекті з металевою підставкою, яка забезпечує стабільність, і компактною упаковкою для зручного зберігання.
                     Замовивши цю ялинку, ви отримаєте не тільки стильний елемент декору, а й створите неповторну атмосферу свята на довгі роки.
                     Гірлянда не входять у вартість ялинки ,її  можна придбати за окрему плату.`,
-      price: 2270,
+      price: 2390,
       image: "../../../assets/image/1M0A9195.jpg",
       gallery: ["../../../assets/image/1M0A9212.jpg", "../../../assets/image/1M0A9209.jpg", "../../../assets/image/1M0A9208.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg", "../../../assets/image/1M0A9207.jpg"],
       type: "лита",
@@ -30,44 +30,44 @@ export class ServiceForTreesService {
         {
           id: 1,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 1.5,
-          price: 2270
+          price: 2390
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 1.8,
-          price: 3280
+          price: 3460
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 2.1,
-          price: 4260
+          price: 4490
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 2.3,
-          price: 5350
+          price: 5640
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 2.5,
-          price: 6890
+          price: 7240
         },
         {
           id: 6,
           image: "../../../assets/image/1M0A9212.jpg",
-          title: "Коваліська зелена",
+          title: "Ковалівська зелена",
           size: 3.0,
-          price: 10990
+          price: 11540
         }
       ]
 
@@ -77,7 +77,7 @@ export class ServiceForTreesService {
       title: "Бельгійська зелена",
       description: `Штучна ялинка Бельгійська – це справжня знахідка для любителів святкового декору. Її реалістичний вигляд досягається завдяки великій кількості індивідуально відлитих гілочок, які створюються в спеціальних формах. Це надає ялинці натурального та святкового вигляду. Коричневі елементи на основах гілок підкреслюють її лісовий характер, роблячи ще більш привабливою. 
                     Гілочки не лише пружні та стійкі до деформації, але й приємні на дотик, що додає особливого комфорту. Обираючи цю ялинку, ви інвестуєте в естетику та атмосферу зимових свят у вашому домі!`,
-      price: 2290,
+      price: 2400,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9449.jpg", "../../../assets/image/1M0A9452.jpg", "../../../assets/image/1M0A9455.jpg",],
       type: "лита",
@@ -90,45 +90,45 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9449.jpg",
           title: "Бельгійська",
           size: 1.5,
-          price: 2290
+          price: 2400
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9449.jpg",
           title: "Бельгійська",
           size: 1.8,
-          price: 3330
+          price: 3500
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9449.jpg",
           title: "Бельгійська",
           size: 2.1,
-          price: 4760
+          price: 5000
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9449.jpg",
           title: "Бельгійська",
           size: 2.3,
-          price: 6110
+          price: 6440
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9449.jpg",
           title: "Бельгійська",
           size: 2.5,
-          price: 7790
+          price: 8190
         },
       ]
 
     },
     {
       id: 3,
-      title: "Бельгійська блакинта",
+      title: "Бельгійська блакитна",
       description: `Штучна ялинка Бельгійська – це справжня знахідка для любителів святкового декору. Її реалістичний вигляд досягається завдяки великій кількості індивідуально відлитих гілочок, які створюються в спеціальних формах. Це надає ялинці натурального та святкового вигляду. Коричневі елементи на основах гілок підкреслюють її лісовий характер, роблячи ще більш привабливою. 
                     Гілочки не лише пружні та стійкі до деформації, але й приємні на дотик, що додає особливого комфорту. Обираючи цю ялинку, ви інвестуєте в естетику та атмосферу зимових свят у вашому домі!`,
-      price: 2290,
+      price: 2400,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9289.jpg", "../../../assets/image/1M0A9291.jpg", "../../../assets/image/1M0A9293.jpg" , "../../../assets/image/1M0A9296.jpg"],
       type: "лита",
@@ -139,37 +139,37 @@ export class ServiceForTreesService {
         {
           id: 1,
           image: "../../../assets/image/1M0A9289.jpg",
-          title: "Бельгійська блакинта",
+          title: "Бельгійська блакитна",
           size: 1.5,
-          price: 2290
+          price: 2400
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9289.jpg",
-          title: "Бельгійська блакинта",
+          title: "Бельгійська блакитна",
           size: 1.8,
-          price: 3330
+          price: 3500
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9289.jpg",
-          title: "Бельгійська блакинта",
+          title: "Бельгійська блакитна",
           size: 2.1,
-          price: 4750
+          price: 5000
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9289.jpg",
-          title: "Бельгійська блакинта",
+          title: "Бельгійська блакитна",
           size: 2.3,
-          price: 6110
+          price: 6440
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9289.jpg",
-          title: "Бельгійська блакинта",
+          title: "Бельгійська блакитна",
           size: 2.5,
-          price: 7790
+          price: 8190
         },
       ]
 
@@ -182,7 +182,7 @@ export class ServiceForTreesService {
                     У комплекті з металевою підставкою, яка забезпечує стабільність, і компактною упаковкою для зручного зберігання.
                     Замовивши цю ялинку, ви отримаєте не тільки стильний елемент декору, а й створите неповторну атмосферу свята на довгі роки.
                     Гірлянда не входять у вартість ялинки ,її  можна придбати за окрему плату,`,
-      price: 2270,
+      price: 2390,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9309.jpg", "../../../assets/image/1M0A9317.jpg", "../../../assets/image/1M0A9319.jpg"],
       type: "лита",
@@ -195,35 +195,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 1.5,
-          price: 2270
+          price: 2390
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 1.8,
-          price: 3280
+          price: 3460
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 2.1,
-          price: 4260
+          price: 4490
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 2.3,
-          price: 5350
+          price: 5640
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9309.jpg",
           title: "Ковалівська Блакитна",
           size: 2.5,
-          price: 6890
+          price: 7240
         },
       ]
 
@@ -234,7 +234,7 @@ export class ServiceForTreesService {
       description: `Штучна ялинка лита Ковалівська засніжена – це пухнаста і елегантна модель, виготовлена з литого матеріалу та прикрашена натуральною бавовною, яка є гіпоалергенною і абсолютно безпечною для здоров'я. Кожна гілка складається з п'яти менших гілочок з хвилястими голками, що надає ялинці об’ємного вигляду. Гілки надійно закріплені ниткою відповідно до європейських стандартів, забезпечуючи їх стабільність і довговічність.
                     Коричневі елементи на основах гілок підкреслюють природний вигляд ялинки, роблячи її схожою на лісову. У комплекті йде металева підставка, а ялинка упакована в зручну коробку для зберігання.
                     Не зберігайте ялинку у вологих місцях і не мочіть. Замовляючи цю штучну ялинку, ви отримуєте не лише стильний декор, але й можливість створити незабутню атмосферу свята у вашому домі!`,
-      price: 2960,
+      price: 3110,
       image: "../../../assets/image/kov_zel",
       gallery: ["../../../assets/image/1M0A9549.jpg", "../../../assets/image/1M0A9554.jpg", "../../../assets/image/1M0A9555.jpg"],
       type: "лита",
@@ -247,42 +247,42 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 1.5,
-          price: 2960
+          price: 3110
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 1.8,
-          price: 4270
+          price: 4490
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 2.1,
-          price: 5540
+          price: 5840
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 2.3,
-          price: 6960
+          price: 7330
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 2.5,
-          price: 8990
+          price: 9420
         },
         {
           id: 6,
           image: "../../../assets/image/1M0A9549.jpg",
           title: "Ковалівська Засніжена",
           size: 3.0,
-          price: 14290
+          price: 15020
         }
       ]
 
@@ -294,7 +294,7 @@ export class ServiceForTreesService {
                     Дерево складається з витонченого гілля двох типів: довгого та короткого, що створює стильний та пропорційний вигляд. Гілочки пружні, легко набирають будь-яку форму, а голки виготовлені з високою точністю.
                     В комплекті ви отримаєте металічну підставку, а ялинка упакована в зручну коробку для зберігання. Уникайте зберігання ялинки у вологих умовах і не мочіть її.
                     Створіть чарівну атмосферу зимових свят з Віденською ялинкою!`,
-      price: 2590,
+      price: 2680,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9492.jpg", "../../../assets/image/1M0A9497.jpg", "../../../assets/image/1M0A9499.jpg"],
       type: "лита",
@@ -307,35 +307,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9492.jpg",
           title: "Віденська засніжена",
           size: 1.5,
-          price: 2590
+          price: 2680
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9492.jpg",
           title: "Віденська засніжена",
           size: 1.8,
-          price: 3840
+          price: 4020
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9492.jpg",
           title: "Віденська засніжена",
           size: 2.1,
-          price: 5460
+          price: 5720
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9492.jpg",
           title: "Віденська засніжена",
           size: 2.3,
-          price: 6840
+          price: 7170
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9492.jpg",
           title: "Віденська засніжена",
           size: 2.5,
-          price: 8430
+          price: 8880
         },
       ]
 
@@ -347,7 +347,7 @@ export class ServiceForTreesService {
                     Ця модель складається з гілок різної довжини, що створює унікальний, природний вигляд. Гілочки легко приймають бажану форму, а їхня пружність гарантує, що вони не зламаються. Декоративні коричневі елементи додають ялинці природності та роблять її схожою на справжнє дерево.
                     У комплекті ви знайдете надійну металічну підставку, а сама ялинка буде упакована в зручну коробку для зберігання. 
                     Додайте неповторного шарму до своїх зимових свят з Віденською ялинкою і насолоджуйтеся атмосферою свята, яка запам’ятається надовго!`,
-      price: 1960,
+      price: 2070,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9514.jpg", "../../../assets/image/1M0A9519.jpg", "../../../assets/image/1M0A9522.jpg"],
       type: "лита",
@@ -360,35 +360,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 1.5,
-          price: 1960
+          price: 2070
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 1.8,
-          price: 2960
+          price: 3090
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.1,
-          price: 4190
+          price: 4420
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.3,
-          price: 5270
+          price: 5520
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9514.jpg",
           title: "Віденська зелена",
           size: 2.5,
-          price: 6500
+          price: 6830
         },
       ]
 
@@ -399,7 +399,7 @@ export class ServiceForTreesService {
       description: `Штучна лита зелена ялинка Канадська стане ідеальним доповненням вашого святкового декору, символізуючи Різдво та Новий рік. Її реалістичний вигляд досягається завдяки безлічі індивідуально відлитих гілочок, що створюють враження натурального дерева. Коричневі елементи на основах гілок надають ялинці лісового шарму і підкреслюють її святковість. Гілочки пружні та не підлягають деформації, забезпечуючи довговічність використання.
                     Гілочки гнучкі, що дозволяє легко формувати їх у бажану форму.
                     Обираючи цю штучну ялинку, ви отримуєте не лише стильний елемент декору, а й надійного супутника для святкових сезонів на багато років вперед. Не втрачайте шанс створити незабутню атмосферу зимових свят у вашому домі!`,
-      price: 2690,
+      price: 2840,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/IMG_7374.jpg", "../../../assets/image/1M0A9257.jpg", "../../../assets/image/1M0A9259.jpg" , "../../../assets/image/1M0A9260.jpg"],
       type: "лита",
@@ -412,35 +412,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 1.5,
-          price: 2690
+          price: 2840
         },
         {
           id: 2,
           image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 1.8,
-          price: 3390
+          price: 3570
         },
         {
           id: 3,
           image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.1,
-          price: 5530
+          price: 5820
         },
         {
           id: 4,
           image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.3,
-          price: 6820
+          price: 7180
         },
         {
           id: 5,
           image: "../../../assets/image/IMG_7374.jpg",
           title: "Канадська",
           size: 2.5,
-          price: 8490
+          price: 8940
         },
       ]
 
@@ -453,7 +453,7 @@ export class ServiceForTreesService {
                     Ялинка обладнана механізмом "Парасолька": просто поверніть стовбур, і гілочки автоматично розкриються. Після використання вам не потрібно підгинати гілочки – достатньо обернути механізм, і ялинка складеться сама.
                     Гілочки надійно закріплені до основної гілки ниткою відповідно до європейських стандартів, що виключає ризик травмування об дріт і покращує естетику стовбура.
                     Удосконалений стовбур не прокручується, а верхівка оснащена спеціальним конектором для легкого монтажу.`,
-      price: 3710,
+      price: 3890,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9609.jpg", "../../../assets/image/1M0A9613.jpg", "../../../assets/image/1M0A9616.jpg" , "../../../assets/image/1M0A9622.jpg"],
       type: "лита",
@@ -466,35 +466,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 1.5,
-          price: 3710
+          price: 3890
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 1.8,
-          price: 5610
+          price: 5890
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.1,
-          price: 7520
+          price: 7920
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.3,
-          price: 9560
+          price: 0
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9609.jpg",
           title: "Рояль sistem umbrella",
           size: 2.5,
-          price: 12290
+          price: 12900
         },
       ]
 
@@ -505,7 +505,7 @@ export class ServiceForTreesService {
       description: `Штучна ялинка Різдвяна з шишкою та калиною стане чудовою прикрасою для ваших свят. Виготовлена з міцної ПВХ-плівки, вона зберігає свій привабливий вигляд на довгі роки, пропонуючи вам більш тривалий варіант, ніж натуральні ялинки.
                     Її призначення – дарувати радість і створювати святковий настрій. Вибираючи штучну ялинку, ви робите екологічний вибір і допомагаєте зберегти природу.
                     З придбанням цієї ялинки ви отримуєте не лише стильний елемент декору, але й можливість насолоджуватися атмосферою зимових свят багато років поспіль.`,
-      price: 1080,
+      price: 1130,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9401.jpg", "../../../assets/image/1M0A9404.jpg", "../../../assets/image/1M0A9406.jpg"],
       type: "пвх",
@@ -518,35 +518,35 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9401.jpg",
           title: "Різдвяна з шишкою та калиною срібна",
           size: 1.5,
-          price: 1080
+          price: 1130
         },
         {
           id: 2,
           image: "../../../assets/image/1M0A9401.jpg",
           title: "Різдвяна з шишкою та калиною срібна",
           size: 1.8,
-          price: 1690
+          price: 1770
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9401.jpg",
           title: "Різдвяна з шишкою та калиною срібна",
           size: 2.0,
-          price: 1990
+          price: 2100
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9401.jpg",
           title: "Різдвяна з шишкою та калиною срібна",
           size: 2.2,
-          price: 2370
+          price: 2480
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9401.jpg",
           title: "Різдвяна з шишкою та калиною срібна",
           size: 2.5,
-          price: 3310
+          price: 3480
         },
       ]
 
@@ -576,49 +576,49 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 1.3,
-          price: 650
+          price: 670
         },
         {
           id: 3,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 1.5,
-          price: 820
+          price: 860
         },
         {
           id: 4,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 1.8,
-          price: 1320
+          price: 1380
         },
         {
           id: 5,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 2.0,
-          price: 1560
+          price: 1640
         },
         {
           id: 6,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 2.2,
-          price: 1840
+          price: 1930
         },
         {
           id: 7,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 2.5,
-          price: 2740
+          price: 2870
         },
         {
           id: 8,
           image: "../../../assets/image/1M0A9478.jpg",
           title: "Лідія з білими кінчиками",
           size: 3.0,
-          price: 5080
+          price: 5340
         }
       ]
 
@@ -650,7 +650,7 @@ export class ServiceForTreesService {
       description: `Декоративна лита ялинка "Віденська засніжена" — чудовий святковий аксесуар, який легко прикрасить будь-яке приміщення.
                     Ця пухнаста ялинка виготовлена з литого матеріалу і прикрашена натуральною бавовною, яка створює ефект снігу. Бавовна є гіпоалергенною та абсолютно безпечною для здоров'я. Гілочки мають хвилясті голки, які забезпечують пружність і не мнуться, зберігаючи свій вигляд протягом тривалого часу.
                     Цю ялинку можна розмістити на столі, каміні, в офісі або вдома, де вона додасть тепла і затишку святковій атмосфері.`,
-      price: 1350,
+      price: 1420,
       image: "../../../assets/image/viktoria zelena.jpg",
       gallery: ["../../../assets/image/1M0A9572.jpg", "../../../assets/image/1M0A9575.jpg", "../../../assets/image/1M0A9353.jpg" , "../../../assets/image/1M0A9356.jpg", "../../../assets/image/1M0A9359.jpg"],
       type: "лита",
@@ -663,7 +663,7 @@ export class ServiceForTreesService {
           image: "../../../assets/image/1M0A9572.jpg",
           title: "Віденська засніжена у горщику",
           size: 1.0,
-          price: 1350
+          price: 1420
         }
       ]
 
@@ -681,8 +681,8 @@ export class ServiceForTreesService {
       gallery: ["../../../assets/image/1M0A9375.jpg"],
       color: "snow",
       type: "лита",
-      bestseller: false,
-      sale: false,
+      bestseller: true,
+      sale: true,
     },
     {
       id: 2,
@@ -692,8 +692,8 @@ export class ServiceForTreesService {
       gallery: ["../../../assets/image/1M0A9382.jpg"],
       color: "green",
       type: "лита",
-      bestseller: false,
-      sale: false,
+      bestseller: true,
+      sale: true,
     }
 
   ]
@@ -701,25 +701,25 @@ export class ServiceForTreesService {
   private leds: IPled[] = [
     {
       id: 1,
-      title: "Гірлядна Роса на котушці 50м",
+      title: "Гірлянда Роса на котушці 50м",
       description: `Гірлянда "Роса" на котушці – головний тренд 2024 року! З нею ваша ялинка виглядатиме як із фільму "Сам удома" – по-справжньому святкова та чарівна.`,
       price: 1090,
-      gallery: ["../../../assets/image/1M0A9195-2.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg"],
-      color: "warmLight",
-      length: "100м",
-      bestseller: false,
-      sale: false,
-    },
-    {
-      id: 2,
-      title: "Гірлядна Роса на котушці 100м",
-      description: `Гірлянда "Роса" на котушці – головний тренд 2024 року! З нею ваша ялинка виглядатиме як із фільму "Сам удома" – по-справжньому святкова та чарівна.`,
-      price: 1690,
-      gallery: ["../../../assets/image/1M0A9195-2.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg"],
+      gallery: ["../../../assets/image/IMG_8331.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg", "../../../assets/image/IMG_8356.jpg"],
       color: "warmLight",
       length: "100м",
       bestseller: true,
-      sale: false,
+      sale: true,
+    },
+    {
+      id: 2,
+      title: "Гірлянда Роса на котушці 100м",
+      description: `Гірлянда "Роса" на котушці – головний тренд 2024 року! З нею ваша ялинка виглядатиме як із фільму "Сам удома" – по-справжньому святкова та чарівна.`,
+      price: 1690,
+      gallery: ["../../../assets/image/IMG_8331.jpg", "../../../assets/image/1M0A9195.jpg", "../../../assets/image/1M0A9200.jpg", "../../../assets/image/IMG_8356.jpg"],
+      color: "warmLight",
+      length: "100м",
+      bestseller: true,
+      sale: true,
     }
   ]
 

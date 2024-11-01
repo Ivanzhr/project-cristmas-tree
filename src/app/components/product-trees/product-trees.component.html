@@ -40,11 +40,12 @@
                     <img src="{{tree.gallery[0]}}" alt="">
                     <div class="name"><p>{{tree.title}}</p></div>
                     <div class="product__bottom">
-                        <div class="price">Від {{tree.price | currency:"UAH"}}</div>
+                        <div>Від</div>
                         <div *ngIf="tree.sale" class="old_price">
-                            {{ (tree.price + (tree.price * 0.40)) | currency:"UAH" }}
+                            ₴{{ (tree.price / (1 - 0.40)) | number: '1.0-0'}}
                         </div>  
-                        <button class="btn_buy" [routerLink]="['/tree/' + tree.id]">Купити</button>
+                        <div class="price">₴{{tree.price}}</div>                        
+                        <!-- <button class="btn_buy" [routerLink]="['/tree/' + tree.id]">Купити</button> -->
                     </div>
                     <div class="label">
                         <div *ngIf="tree.bestseller" class="best_sellers_banner"><span>Хіт продажу</span></div>

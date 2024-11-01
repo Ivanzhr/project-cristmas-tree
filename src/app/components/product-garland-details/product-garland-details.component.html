@@ -8,10 +8,11 @@
       <div class="sizes">
         <div class="size">
           <img src="{{product.gallery[0]}}" alt="">
-          <p>Ціна: {{ product.price | currency: 'UAH' }}</p>
+          <p>Ціна</p>
           <div *ngIf="product.sale" class="old_price">
-            {{ (product.price + (product.price * 0.40)) | currency: 'UAH' }}
+            ₴{{ (product.price / (1 - 0.40)) | number: '1.0-0' }}
           </div>
+          <p class="price">₴{{ product.price}}</p>
           <button class="btn_buy" [routerLink]="['/order/garland/' + product.id]">Купити</button>
         </div>
         <div class="description">
